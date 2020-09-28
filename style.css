@@ -42,9 +42,9 @@ html, body{
 .main{
     background-color: transparent;
     width:50vh;
-    max-width: 512px;
+    max-width: 400px;
     height:50vh;
-    max-height: 400px;
+    max-height: 200px;
     /* border-style: solid; */
     /* border-color: #000; */
     display: flex;
