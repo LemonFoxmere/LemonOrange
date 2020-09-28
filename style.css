@@ -42,7 +42,7 @@ html, body{
 .main{
     background-color: transparent;
     width:50vh;
-    max-width: 512px;
+    max-width: 390px;
     height:50vh;
     max-height: 200px;
     /* border-style: solid; */
