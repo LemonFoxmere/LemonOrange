@@ -18,7 +18,7 @@
 
     <body>
         <!-- Start of header Div -->
-        <div class="header" style="z-index: 2;">
+        <div class="header" style="position: relative;z-index: 2;">
             <!-- animaion div -->
             <div class="logo-container" style="flex-wrap: wrap; margin-top: auto; margin-bottom: auto;">
                 <div class="main">
@@ -127,8 +127,8 @@
             </div>
 
             <a href="https://github.com/Orange-Parrot" style = "position: fixed;
-            right:52%;
-            bottom: 52%;
+            right:53%;
+            bottom: 53%;
             transform: translate(50vw,50vh)">
                 <img class="imageBtn" src="assets/githubLogo.png" alt="Check out our Github!"
                 style="width:calc(3vh + 3vw)">
@@ -136,21 +136,22 @@
 
             <a href="#about-us">
                 <img class="contSecBtn" id="homeContBtn"
-                src="assets/continue.png" alt="continue" style="width:calc(1.5vh + 1.5vw); margin-bottom: 3vh;">
+                src="assets/continue.png" alt="continue" style="width:calc(1.5vh + 1.5vw); margin-bottom: 4vh;">
             </a>
 
             <!-- End of Header Div -->
         </div>
 
-        <div class="content-page sub1" id="about-us">
-            <h2 style="color:rgb(230, 230, 230); font-family: 'MontrealRegular';" 
-            class="rellax" data-rellax-percentage="0.5" data-rellax-speed="-4">
-                Coming Soon!
-            </h2>
-            <h6 style="color:rgb(230, 230, 230); font-family: 'MontrealRegular'; margin-top: 5vh;" 
-            class="rellax" data-rellax-percentage="0.5" data-rellax-speed="-4">
-                Mean while, check out our github at the lower right!
-            </h6>
+        <div class="content-page sub1" id="about-us" style="position: relative;z-index: 1;">
+            <section class="rellax" data-rellax-speed="-7"
+            data-rellax-percentage="0.5">
+                <h2 style="color:rgb(230, 230, 230); font-family: 'MontrealRegular';">
+                    Coming Soon!
+                </h2>
+                <h6 style="color:rgb(230, 230, 230); font-family: 'MontrealRegular'; margin-top: 3vh;">
+                    Mean while, check out our github at the lower right!
+                </h6>
+            </section>
         </div>
 
         <script src="script/anime.min.js"></script>

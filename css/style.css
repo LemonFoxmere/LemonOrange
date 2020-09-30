@@ -54,6 +54,7 @@
 html, body{
     margin:0;
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 /* animation part */
