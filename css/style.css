@@ -1,0 +1,144 @@
+/* content pages */
+.content-page{
+    height:100vh
+}
+
+.content-page.sub1{
+    background-color: #4a5663;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* header sections */
+.header{
+    background-color: #566473;
+    height:100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    /* text colors */
+    color:white;
+}
+
+.logo-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-title{
+    font-family: 'Comfortaa';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-titletext{
+    font-size: calc(0.75em + 1vmin);
+}
+
+#studio-name-container{
+    /* border:black solid; */
+    width: calc(8.5 * calc(0.75em + 1vmin));
+}
+
+html, body{
+    margin:0;
+    scroll-behavior: smooth;
+}
+
+/* animation part */
+.main{
+    background-color: transparent;
+    width:50vh;
+    max-width: 512px;
+    height:50vh;
+    max-height: 35vh;
+    /* border-style: solid; */
+    /* border-color: #000; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.node-logo1, .node-logo2{
+    fill-opacity: 1;
+    fill: transparent;
+    stroke:#374049;
+    stroke-width:0.5;
+    stroke-opacity:1;
+    stroke-dasharray: 100%;
+    stroke-dashoffset: 100%;
+}
+
+.node-logo2{
+    stroke-width:0.4;
+}
+
+.logo-svg{
+    position: absolute;
+    width:50%;
+    height:50%;
+}
+
+/* continuous animations */
+.contSecBtn{
+    animation-name: vBob;
+    animation-duration: 4000ms;
+    animation-iteration-count: infinite;
+    animation-delay: 2000ms;
+}
+
+/* event listeners for special buttons */
+.imageBtn{
+    opacity: 0.7;
+    animation: 'fadeOut';
+    animation-duration: 300ms;
+}
+.imageBtn:hover{
+    opacity: 1;
+    animation: 'fadeIn';
+    animation-duration: 300ms;
+}
+
+.contSecBtn:hover{
+    transform: translate(0px, 100px);
+}
+
+/* animations for transistion */
+/* fading animation */
+@keyframes fadeOut {
+    from {opacity: 1;}
+    to {opacity: 0.7;}
+}
+@keyframes fadeIn {
+    from {opacity: 0.7;}
+    to {opacity: 1;}
+}
+
+/* move up or down */
+@keyframes moveUp {
+    from {transform: translateY(0px);}
+    to {transform: translateY(-20px);}
+}
+@keyframes moveDown {
+    from {transform: translateY(-20px);}
+    to {transform: translateY(0px);}
+}
+
+/* bobbing up and down */
+@keyframes vBob {
+    0%   {transform: translateY(0px);}
+    5% {transform: translateY(5px);}
+    10% {transform: translateY(0px);}
+    15% {transform: translateY(5px);}
+    20% {transform: translateY(0px);}
+    100% {transform: translateY(0px);}
+}
