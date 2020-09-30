@@ -6,6 +6,8 @@
 .content-page.sub1{
     background-color: #4a5663;
 
+    text-align: center;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
