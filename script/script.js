@@ -139,17 +139,9 @@ function initializeAnimation(){
         duration:1000,
         translateX: ['0px','calc(0.2 * calc(0.75em + 1vmin))']
     },'-=1000')
-    timeline3.add({
-        targets:'#greeting2',
-        easing: "easeOutQuart",
-        duration:1000,
-        translateX: ['0px','calc(-0.2 * calc(0.75em + 1vmin))']
-    },'-=1000')
+
     timeline3.set('#greeting1', {
         translateX: 'calc(0.2 * calc(0.75em + 1vmin))'
-    })
-    timeline3.set('#greeting2', {
-        translateX: 'calc(-0.2 * calc(0.75em + 1vmin))'
     })
 
     // finalize text switch 1
@@ -182,17 +174,11 @@ function initializeAnimation(){
         duration:1000,
         translateX: ['calc(0.4 * calc(0.75em + 1vmin))',0]
     },'-=1000')
-    timeline4.add({
-        targets:'#greeting2',
-        easing: "easeOutQuart",
-        duration:1000,
-        translateX: ['calc(-0.4 * calc(0.75em + 1vmin))',0]
-    },'-=1000')
 
     // finalize text switch 2
     switchToLogo2Text = timeline4
 
-    anime.set('#greeting1, #greeting2', {
+    anime.set('#greeting1', {
         translateX: 0
     })
     anime.set('.header-title',{
