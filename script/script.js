@@ -16,13 +16,7 @@ function initializeAnimation(){
         ease: "easeInOutQuad",
         autoplay : false,
         duration:500,
-        direction:'alternate',
         loop:1,
-
-        complete : ()=>{ //when this is finished play the second animation
-            animLogo2.play()
-            switchToLogo1Text.play()
-        }
     });
     timeline.add({ //set a stagger of filling in stroke dash offset, giving an illusion of drawing logo
         targets: '.node-logo1',
@@ -49,104 +43,6 @@ function initializeAnimation(){
     timeline.add({duration:animationDisplayTime}) //add wait time
     // logo 1 finalization
     animLogo1 = timeline
-    // logo 2 animation
-    const timeline2 = anime.timeline({ //initialize animation 2
-        ease: "easeInOutQuad",
-        autoplay : false,
-        duration:500,
-        direction:'alternate',
-        loop:1,
-        complete : ()=>{
-            animLogo1.play()
-            switchToLogo2Text.play()
-        }
-    });
-    timeline2.add({ //set dash offset to draw logo with a stagger
-        targets: '.node-logo2',
-        strokeDashoffset: ['100%', '0%'],
-        easing: 'easeInOutQuad',
-        duration:2000,
-        delay: anime.stagger(300)
-    }, animationDisplayDelay)
-    timeline2.add({
-        // pop away the text first
-        targets: "#studio-name",
-        easing: 'easeOutQuad',
-        duration:700,
-        translateY:0
-        // fillOpacity:[100, 0]
-    }, '-=2200')
-    timeline2.add({ //fillin logo
-        targets:'#head',
-        fillOpacity : ['0%','100%'],
-        fill : '#ff8109',
-        easing:'easeOutQuart',
-        duration:500,
-        strokeOpacity : 0
-    }, "-=500")
-    timeline2.add({ //fillin logo
-        targets:'#neck',
-        fillOpacity : ['0%','100%'],
-        fill : '#ff9c09',
-        easing:'easeOutQuart',
-        duration:500,
-        strokeOpacity : 0
-    }, "-=500")
-    timeline2.add({ //fillin logo
-        targets:'#hair',
-        fillOpacity : ['0%','100%'],
-        fill : '#ffcb09',
-        easing:'easeOutQuart',
-        duration:500,
-        strokeOpacity : 0
-    }, "-=500")
-    timeline2.add({ //fillin logo
-        targets:'#eye',
-        fillOpacity : ['0%','100%'],
-        fill : '#ff0909',
-        duration:500,
-        strokeOpacity : 0
-    }, "-=500")
-    // timeline 2 finalization
-    timeline2.add({duration:animationDisplayTime}) //setting a timeout on animation
-    //finalize animation 2
-    animLogo2 = timeline2
-
-    // start initializing
-    const timeline3 = anime.timeline({ //initialize text switch
-        autoplay:false,  
-    })
-    timeline3.add({
-        targets:'#studio-name',
-        easing: "easeOutQuart",
-        duration:700,
-        translateY:50,
-        opacity:0,
-    })
-    timeline3.add({
-        targets:'#studio-name',
-        easing: "easeOutQuart",
-        duration:1000,
-        translateY:0,
-        opacity:1,
-        update: ()=>{
-            document.querySelector('#studio-name').innerHTML='Orange Parrot'
-        }
-    },'+=200')
-    timeline3.add({
-        targets:'#greeting1',
-        easing: "easeOutQuart",
-        duration:1000,
-        translateX: ['0px','calc(0.2 * calc(0.75em + 1vmin))']
-    },'-=1000')
-
-    timeline3.set('#greeting1', {
-        translateX: 'calc(0.2 * calc(0.75em + 1vmin))'
-    })
-
-    // finalize text switch 1
-    switchToLogo1Text = timeline3
-
     
     const timeline4 = anime.timeline({ //initialize text switch
         autoplay:false,  
