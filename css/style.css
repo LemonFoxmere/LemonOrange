@@ -14,6 +14,16 @@
     align-items: center;
 }
 
+.content-page.sub2{
+    background-color: #566473;
+
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
 /* header sections */
 .header{
@@ -36,6 +46,7 @@
 }
 
 .header-title{
+    text-align: center;
     font-family: 'Comfortaa';
     display: flex;
     align-items: center;
@@ -43,15 +54,16 @@
 }
 
 .header-titletext{
-    font-size: calc(0.75em + 1vmin);
+    font-size: 2em;
 }
 
 #studio-name-container{
     /* border:black solid; */
-    width: calc(8.5 * calc(0.75em + 1vmin));
+    width: 100%;
 }
 
 html, body{
+    scroll-behavior: smooth;
     margin:0;
     scroll-behavior: smooth;
     overflow-x: hidden;
@@ -102,38 +114,11 @@ html, body{
 /* event listeners for special buttons */
 .imageBtn{
     opacity: 0.7;
-    animation: 'fadeOut';
-    animation-duration: 300ms;
+    transition: all 230ms cubic-bezier(0.260, 0.050, 0.250, 1.000); /* custom */
 }
 .imageBtn:hover{
     opacity: 1;
-    animation: 'fadeIn';
-    animation-duration: 300ms;
-}
-
-.contSecBtn:hover{
-    transform: translate(0px, 100px);
-}
-
-/* animations for transistion */
-/* fading animation */
-@keyframes fadeOut {
-    from {opacity: 1;}
-    to {opacity: 0.7;}
-}
-@keyframes fadeIn {
-    from {opacity: 0.7;}
-    to {opacity: 1;}
-}
-
-/* move up or down */
-@keyframes moveUp {
-    from {transform: translateY(0px);}
-    to {transform: translateY(-20px);}
-}
-@keyframes moveDown {
-    from {transform: translateY(-20px);}
-    to {transform: translateY(0px);}
+    transition: all 230ms cubic-bezier(0.260, 0.050, 0.250, 1.000); /* custom */
 }
 
 /* bobbing up and down */
