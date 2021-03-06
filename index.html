@@ -10,6 +10,8 @@
         <link rel="stylesheet" href="https://fontlibrary.org/face/montreal">
         
         <!-- fonts -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;700;800;900&display=swap" rel="stylesheet"> 
         <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400&display=swap" rel="stylesheet"> 
         
         <!-- favicon -->
@@ -20,9 +22,8 @@
         <!-- Start of header Div -->
         <div class="header" style="position: relative;z-index: 2;">
             <!-- animaion div -->
-            <div class="logo-container" style="flex-wrap: wrap; margin-top: auto; margin-bottom: auto;">
+            <div class="logo-container" style="flex-wrap: wrap; margin-top: auto; margin-bottom: auto; position: absolute">
                 <div class="main">
-
                     <svg
                     class="logo-svg"
                     xmlns:dc="http://purl.org/dc/elements/1.1/"
@@ -36,39 +37,40 @@
                         <path
                         class="node-logo1"
                         id = "bottomL"
-                        d="m 55.033333,38.1 h 8.466666 v 42.333332 h 6.35 v 8.466667 H 55.033333 Z"
-                        style="stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4" />
+                        d="m 55.033335,40.216667 c 0,-1.058334 1.058332,-2.116667 2.116666,-2.116667 h 4.233334 c 1.058332,0 2.116666,1.058333 2.116666,2.116667 L 63.5,80.433333 h 4.233334 c 1.058332,0 2.116666,1.058332 2.116666,2.116666 l 1e-6,4.233334 c 0,1.058333 -1.058334,2.116667 -2.116666,2.116667 H 57.150001 c -1.058334,0 -2.116666,-1.058334 -2.116666,-2.116667 V 40.216667"
+                        style="stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4; stroke:#ff8700"
+                        />
                         
                         <path
                         class="node-logo1"
                         id="bottomS"
-                        d="m 82.549999,80.433332 c 10e-7,2.822222 10e-7,5.644445 0,8.466667 2.116667,1e-6 4.233333,0 6.35,0 2e-6,-2.822222 1e-6,-5.644445 0,-8.466667 -2.116667,1e-6 -4.233333,1e-6 -6.35,0 z"
-                        style="stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4" />
+                        d="m 84.666661,80.433334 h 2.116669 c 1.172632,0 2.116665,0.944033 2.116665,2.116666 v 4.233335 c 0,1.172633 -0.944033,2.116666 -2.116665,2.116666 h -2.116669 c -1.172633,0 -2.116666,-0.944033 -2.116666,-2.116666 V 82.55 c 0,-1.172633 0.944033,-2.116666 2.116666,-2.116666 z"
+                        style="stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4; stroke:#ff8700" />
                         
                         <path
                         class="node-logo1"
                         id="topL"
-                        d="M 80.433332,97.366665 V 46.566666 H 65.616666 v 8.466667 h 6.35 v 42.333332 z"
-                        style="stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4" />
+                        d="m 78.316666,97.366665 c 1.058334,0 2.116666,-1.058332 2.116666,-2.116666 V 48.683333 c 0,-1.058333 -1.058332,-2.116667 -2.116666,-2.116667 H 67.733332 c -1.058332,0 -2.116666,1.058334 -2.116666,2.116667 l 1e-6,4.233334 c 0,1.058334 1.058334,2.116666 2.116666,2.116666 h 4.233334 l -10e-7,40.216666 c 0,1.058334 1.058334,2.116666 2.116666,2.116666 h 4.233334"
+                        style="stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4; stroke: #ffc000" />
                         
                         <path
                         class="node-logo1"
                         id="topS"
-                        d="m 52.916666,55.033333 h -6.35 v -8.466667 h 6.35 z"
-                        style="stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4" />
+                        d="m 48.683333,46.566666 h 2.116665 c 1.172634,0 2.116668,0.944033 2.116668,2.116667 v 4.233331 c 0,1.172634 -0.944034,2.116668 -2.116668,2.116668 h -2.116665 c -1.172634,0 -2.116667,-0.944034 -2.116667,-2.116668 v -4.233331 c 0,-1.172634 0.944033,-2.116667 2.116667,-2.116667 z"
+                        style="stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4; stroke: #ffc000" />
                     </g>
                     </svg>
                 </div>
 
-                <!-- Header div -->
-                <section class="header-title">
-                    <div id='studio-name-container', style="display: flex; justify-content: center; align-items: center;">
-                        <h1 class = "header-titletext" id="studio-name">
-                            Lemon Orange
-                        </h1>
-                    </div>
-                </section>
             </div>
+            <!-- Header div -->
+            <section class="header-title">
+                <div id='studio-name-container', style="display: flex; justify-content: center; align-items: center; position: absolute; top:48vh">
+                    <h1 class = "header-titletext" id="studio-name">
+                        Lemon Orange
+                    </h1>
+                </div>
+            </section>
 
             <a href="https://github.com/LemonOrangeWasTaken" style = "position: fixed;
             right:53%;
@@ -80,7 +82,7 @@
 
             <a href="#about">
                 <img class="contSecBtn"
-                src="assets/continue.png" alt="continue" style="width:calc(1.5vh + 1.5vw); margin-bottom: 4vh;">
+                src="assets/continue.png" alt="continue" style="width:calc(1.5vh + 1.5vw); margin-bottom: 4vh; position: absolute; top:93vh">
             </a>
 
             <!-- End of Header Div -->

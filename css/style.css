@@ -40,14 +40,16 @@
 
 .logo-container{
     display: flex;
-    flex-direction: column;
+    flex-direction: horizontal;
     justify-content: center;
     align-items: center;
 }
 
 .header-title{
     text-align: center;
-    font-family: 'Comfortaa';
+    font-family: 'Montserrat';
+    font-weight: bold;
+    letter-spacing: 7px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -62,6 +64,10 @@
     width: 100%;
 }
 
+#studio-name{
+    font-size:calc(1.3vh + 1.3vw)
+}
+
 html, body{
     scroll-behavior: smooth;
     margin:0;
@@ -72,12 +78,11 @@ html, body{
 /* animation part */
 .main{
     background-color: transparent;
-    width:50vh;
-    max-width: 512px;
-    height:50vh;
-    max-height: 35vh;
-    /* border-style: solid; */
-    /* border-color: #000; */
+    width:100vh;
+    max-width: 500px;
+    height:100vh;
+    /* border-style: solid;
+    border-color: #000; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -86,7 +91,6 @@ html, body{
 .node-logo1, .node-logo2{
     fill-opacity: 1;
     fill: transparent;
-    stroke:#374049;
     stroke-width:0.5;
     stroke-opacity:1;
     stroke-dasharray: 100%;
@@ -99,8 +103,8 @@ html, body{
 
 .logo-svg{
     position: absolute;
-    width:50%;
-    height:50%;
+    width:100%;
+    height:100%;
 }
 
 /* continuous animations */
