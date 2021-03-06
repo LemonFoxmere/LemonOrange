@@ -23,6 +23,18 @@ function initializeAnimation(){
         easing: 'easeInOutQuad',
         duration:2000,
         delay: anime.stagger(150)
+    }, '+=500')
+    timeline.add({ //fillin logo
+        targets:'#studio-name',
+        easing:'easeInOutQuint',
+        duration:700,
+        translateY:'-12vh'
+    })
+    timeline.add({ //fillin logo
+        targets:'#studio-name',
+        easing:'easeInOutQuint',
+        duration:1000,
+        translateY:'20vh'
     })
     timeline.add({ //fillin logo
         targets:'#bottomL, #bottomS',
@@ -31,14 +43,15 @@ function initializeAnimation(){
         fill : '#ff8700',
         duration:300,
         strokeOpacity : 0
-    }, '-=00')
+    }, '-=500')
     timeline.add({ //fillin logo
         targets:'#topL, #topS',
         fill : '#ffc000',
         easing:'easeOutQuart',
         duration:300,
         strokeOpacity : 0
-    }, '-=300')
+    }, '-=500')
+    
     timeline.add({duration:animationDisplayTime}) //add wait time
     // logo 1 finalization
     animLogo1 = timeline
