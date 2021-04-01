@@ -45,11 +45,13 @@ function initializeAnimation(){
     //start playing animation 1 immediatly
     if(!isMobile()){
         animLogo1.play()
+    } else {
+        animLogo1.seek(animLogo1.duration );
     }
 }
 
 window.addEventListener('scroll', () => {
-    if(window.innerWidth >= 1000 || isMobile()){
+    if(window.innerWidth >= 1000 || !isMobile()){
         if(window.scrollY >= 200){
             if(!logoStowed){
                 anime({
