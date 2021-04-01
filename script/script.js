@@ -129,8 +129,4 @@ function isMobile() {
 
 window.onload = () => {
     initializeAnimation()
-    if(!isMobile()){
-        let scene = document.getElementById('scene')
-        let parallax = new Parallax(scene)
-    }
 }
