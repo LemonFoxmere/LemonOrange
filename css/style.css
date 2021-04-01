@@ -55,6 +55,10 @@
     fill: #2B323A;
 }
 
+.bgdeco{
+    object-fit: cover;
+}
+
 .content-page.sub2{
     background-color: #181c1f;
 
@@ -68,6 +72,7 @@
 
 /* header sections */
 .header{
+    overflow: hidden;
     background-color: #181c1f;
     /* background-color: transparent; */
     height:100vh;

@@ -20,7 +20,29 @@
 
     <body>
         <!-- Start of header Div -->
-        <div class="header" id='start' style="position: relative;z-index: 2;">            
+        <div class="header" id='start' style="position: relative;z-index: 2;">
+            <ul id="scene">
+                <li class="layer" data-depth="0.1">
+                    <img class="bgdeco" src="assets/bgdeco/image1.png">
+                </li>
+                <li class="layer" data-depth="-0.15">
+                    <img class="bgdeco" src="assets/bgdeco/image2.png">
+                </li>
+                <li class="layer" data-depth="0.07">
+                    <img class="bgdeco" src="assets/bgdeco/image3.png">
+                </li>
+                <li class="layer" data-depth="0.15">
+                    <img class="bgdeco" src="assets/bgdeco/image4.png">
+                </li>
+                <li class="layer" data-depth="-0.04">
+                    <img class="bgdeco" src="assets/bgdeco/image5.png">
+                </li>
+                <li class="layer" data-depth="0.12">
+                    <img class="bgdeco" src="assets/bgdeco/image6.png">
+                </li>
+            </ul>       
+
+            <!-- logo -->
             <div class="logo-container" style="flex-wrap: wrap; margin-top: auto; margin-bottom: auto; position: absolute">
                 <div class="main">
                     <svg
@@ -134,5 +156,6 @@
         <script src="script/anime.min.js"></script>
         <script src="script/rellax.min.js"></script>
         <script src="script/script.js"></script>
+        <script src="node_modules/parallax-js/dist/parallax.min.js"></script>
     </body>
 </html>
