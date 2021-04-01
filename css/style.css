@@ -97,28 +97,29 @@
 .header-titletext{
     font-size: min(calc(1.3vh + 1.3vw), 2em);
     font-weight: 500;
-    font-family: 'URW Gothic L';
-    letter-spacing: 7px;
+    font-family: 'Montserrat';
+    letter-spacing: 5px;
 }
 
 #studio-name-container{
     border:transparent solid;
-    padding-bottom: 5px;
-    padding-top: 5px;
+    /* padding-bottom: 5px; */
+    /* padding-top: 5px;
     padding-left: 30px;
-    padding-right: 20px;
+    padding-right: 20px; */
     border-radius: 1000px;
     text-decoration: none;
-    animation-name: 'borderDisappearance';
+    /* animation-name: 'borderDisappearance'; */
     animation-duration: 300ms;
     color:white 
 }
 
+/* 
 #studio-name-container:hover{
     animation-name: 'borderAppearance';
     animation-duration: 300ms;
     border:white solid;
-}
+} */
 
 html, body{
     scroll-behavior: smooth;

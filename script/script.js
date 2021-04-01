@@ -1,9 +1,13 @@
 var animLogo1;
-
+var animIdentity;
 // logo stowing animation
 logoStowed = false;
 
 const textBoxWidth = document.querySelector('#studio-name-container').offsetWidth
+const sleep = (delay) => new Promise((resolve) => setTimeout(resolve, delay))
+descriptionRoot = 'Hello, I am '
+mobileDesk = 'Hello, I am a software developer'
+description = ['a software developer', 'an AI researcher', 'a maker', 'a UI designer', 'a person']
 
 var rellax = new Rellax('.rellax');
 
@@ -48,11 +52,39 @@ function initializeAnimation(){
     } else {
         animLogo1.seek(animLogo1.duration );
     }
+
+    descriptionStartup()
+}
+
+async function descriptionStartup(){
+    if(!isMobile()){
+    for(let i = 0; i < descriptionRoot.length; i++){
+        document.querySelector('#identity-thing').innerHTML = descriptionRoot.substring(0,i+1) + ''
+        await sleep(100)
+    }
+    loopDesk()} else {
+        document.querySelector('#identity-thing').innerHTML = mobileDesk
+    }
+}
+
+async function loopDesk(){
+    for(let k = 0; k < description.length; k++){
+        for(let i = 0; i < description[k].length; i++){
+            document.querySelector('#identity-thing').innerHTML = descriptionRoot + description[k].substring(0,i+1) + ''
+            await sleep(100)
+        }
+        await sleep(5000)
+        for(let i = description[k].length-1; i >= 0; i--){
+            document.querySelector('#identity-thing').innerHTML = descriptionRoot + description[k].substring(0,i) + ''
+            await sleep(100)
+        }
+    }
+    loopDesk()
 }
 
 window.addEventListener('scroll', () => {
     if(window.innerWidth >= 1000 || !isMobile()){
-        if(window.scrollY >= 200){
+        if(window.scrollY >= 50){
             if(!logoStowed){
                 anime({
                     targets:'#studio-name-container',
@@ -63,7 +95,7 @@ window.addEventListener('scroll', () => {
                 })
             }
             logoStowed = true
-        } if(window.scrollY <= 100){
+        } if(window.scrollY < 50){
             if(logoStowed){
                 anime({
                     targets:'#studio-name-container',
