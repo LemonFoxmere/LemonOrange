@@ -1,8 +1,7 @@
 var animLogo1;
-var animLogo2;
 
-var switchToLogo1Text;
-var switchToLogo2Text;
+// logo stowing animation
+logoStowed = false;
 
 const textBoxWidth = document.querySelector('#studio-name-container').offsetWidth
 
@@ -22,20 +21,8 @@ function initializeAnimation(){
         strokeDashoffset: ['100%', '0%'],
         easing: 'easeInOutQuad',
         duration:2000,
-        delay: anime.stagger(150)
+        delay: anime.stagger(300)
     }, '+=500')
-    timeline.add({ //fillin logo
-        targets:'#studio-name',
-        easing:'easeInOutQuint',
-        duration:700,
-        translateY:'-12vh'
-    })
-    timeline.add({ //fillin logo
-        targets:'#studio-name',
-        easing:'easeInOutQuint',
-        duration:1000,
-        translateY:'20vh'
-    })
     timeline.add({ //fillin logo
         targets:'#bottomL, #bottomS',
         fillOpacity : ['0%','100%'],
@@ -43,23 +30,49 @@ function initializeAnimation(){
         fill : '#ff8700',
         duration:300,
         strokeOpacity : 0
-    }, '-=500')
+    }, '-=00')
     timeline.add({ //fillin logo
         targets:'#topL, #topS',
         fill : '#ffc000',
         easing:'easeOutQuart',
         duration:300,
         strokeOpacity : 0
-    }, '-=500')
+    }, '-=00')
     
     timeline.add({duration:animationDisplayTime}) //add wait time
     // logo 1 finalization
     animLogo1 = timeline
-
-
     //start playing animation 1 immediatly
     animLogo1.play()
 }
+
+window.addEventListener('scroll', () => {
+    if(window.innerWidth >= 1000){
+        if(window.scrollY >= 200){
+            if(!logoStowed){
+                anime({
+                    targets:'#studio-name-container',
+                    translateX: '-35vw',
+                    easing:'easeOutQuart',
+                    backgroundColor: 'rgba(24,28,31,0)',
+                    duration:500,
+                })
+            }
+            logoStowed = true
+        } if(window.scrollY <= 100){
+            if(logoStowed){
+                anime({
+                    targets:'#studio-name-container',
+                    translateX: '0vw',
+                    easing:'easeOutQuart',
+                    backgroundColor: 'rgba(0,0,0,0)',
+                    duration:500,
+                })
+            }
+            logoStowed = false
+        }
+    }
+})
 
 window.onload = () => {
     initializeAnimation()

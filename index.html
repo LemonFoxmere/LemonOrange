@@ -19,12 +19,7 @@
 
     <body>
         <!-- Start of header Div -->
-        <div class="header" style="position: relative;z-index: 2;">
-            <!-- animaion div -->
-            <video loop muted autoplay class="fullscreen-bg__video">
-                <source src="assets/websiteBanner.mp4" type="video/mp4">
-            </video>
-            
+        <div class="header" id='start' style="position: relative;z-index: 2;">            
             <div class="logo-container" style="flex-wrap: wrap; margin-top: auto; margin-bottom: auto; position: absolute">
                 <div class="main">
                     <svg
@@ -64,23 +59,29 @@
                     </g>
                     </svg>
                 </div>
-
+            </div>
+            <div class="custom-shape-divider-bottom-1617236461">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="shape-fill"></path>
+                    <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" class="shape-fill"></path>
+                    <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shape-fill"></path>
+                </svg>
             </div>
             <!-- Header div -->
             <section class="header-title">
-                <div id='studio-name-container', style="display: flex; justify-content: center; align-items: center; position: absolute; top:48vh">
+                <a href='#start', id='studio-name-container', style="display: flex; justify-content: center; align-items: center; position: fixed; top:2vh; z-index:1">
                     <h1 class = "header-titletext" id="studio-name">
                         Lemon Orange
                     </h1>
-                </div>
+                </a>
             </section>
 
             <a href="https://github.com/LemonOrangeWasTaken" style = "position: fixed;
             right:53%;
             bottom: 53%;
-            transform: translate(50vw,50vh)">
-                <img class="imageBtn" src="assets/githubLogo.png" alt="Check out our Github!"
-                style="width:calc(3vh + 3vw)">
+            transform: translate(49vw,49vh)">
+                <img id='gitLogo', class="imageBtn" src="assets/githubLogo.png" alt="Check out my Github!"
+                style="width:calc(4vh + 4vw)">
             </a>
 
             <a href="#about">
@@ -98,7 +99,7 @@
                     Who are you?
                 </h1>
                 <h6 style="color:rgb(230, 230, 230); font-family: 'MontrealRegular'; margin-top: 3vh; line-height: 1.7em">
-                    I am a software developer and maker, and I like to design and make things <br> Check out some of my stuff below
+                    I am a <b>software developer</b>, <b>maker</b>, and <b>researcher</b><br>And occasionally I draw as well... <br><br> But in summary,<br>I am a person and I do stuff <br><br> Feel free to check out some of my stuff below
                 </h6>
             </section>
             <a href="#projects">
@@ -109,13 +110,20 @@
 
 
         <div class="content-page sub2" id="projects" style="position: relative;z-index: 1;">
-            <h1 style="color:rgb(230, 230, 230); font-family: 'MontrealRegular'; margin-top: auto; margin-bottom:auto; line-height: 1.7em">
-                Nothing here yet <br> ¯\_(ツ)_/¯
+            <div class="custom-shape-divider-top-1617236723">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="shape-fill"></path>
+                    <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" class="shape-fill"></path>
+                    <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shape-fill"></path>
+                </svg>
+            </div>
+            <h1 style="color:rgb(230, 230, 230); font-family: 'MontrealRegular'; position:absolute; top:45vh; line-height: 1.7em">
+                Nothing added here yet <br> ¯\_(ツ)_/¯
             </h1>
 
-            <h6 style="color:rgb(230, 230, 230); font-family: 'MontrealRegular'; margin-bottom: 10vh; line-height: 1.7em">
-                Meanwhile, why not check out my github?
-            </h6>
+            <h5 style="color:rgb(230, 230, 230); font-family: 'MontrealRegular'; line-height: 1.7em; position: absolute; top:90vh">
+                Meanwhile, why not check out my GitHub?
+            </h5>        
         </div>
 
         <script src="script/anime.min.js"></script>

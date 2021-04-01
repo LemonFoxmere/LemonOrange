@@ -3,15 +3,8 @@
     height:100vh
 }
 
-.fullscreen-bg__video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-}
-
 .content-page.sub1{
-    background-color: #4a5663;
+    background-color: #2b323a;
 
     text-align: center;
 
@@ -21,8 +14,49 @@
     align-items: center;
 }
 
+.custom-shape-divider-bottom-1617236461 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1617236461 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 125px;
+}
+
+.custom-shape-divider-bottom-1617236461 .shape-fill {
+    fill: #2b323a;
+}
+
+.custom-shape-divider-top-1617236723 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-top-1617236723 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 125px;
+}
+
+.custom-shape-divider-top-1617236723 .shape-fill {
+    fill: #2B323A;
+}
+
 .content-page.sub2{
-    background-color: #566473;
+    background-color: #181c1f;
 
     text-align: center;
 
@@ -34,7 +68,7 @@
 
 /* header sections */
 .header{
-    background-color: #566473;
+    background-color: #181c1f;
     /* background-color: transparent; */
     height:100vh;
     display: flex;
@@ -55,9 +89,6 @@
 
 .header-title{
     text-align: center;
-    font-family: 'Montserrat';
-    font-weight: bold;
-    letter-spacing: 7px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -65,11 +96,28 @@
 
 .header-titletext{
     font-size: min(calc(1.3vh + 1.3vw), 2em);
+    font-weight: 500;
+    font-family: 'URW Gothic L';
+    letter-spacing: 7px;
 }
 
 #studio-name-container{
-    /* border:black solid; */
-    width: 100%;
+    border:transparent solid;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    padding-left: 30px;
+    padding-right: 20px;
+    border-radius: 1000px;
+    text-decoration: none;
+    animation-name: 'borderDisappearance';
+    animation-duration: 300ms;
+    color:white 
+}
+
+#studio-name-container:hover{
+    animation-name: 'borderAppearance';
+    animation-duration: 300ms;
+    border:white solid;
 }
 
 html, body{
@@ -87,6 +135,7 @@ html, body{
     height:100vh;
     /* border-style: solid;
     border-color: #000; */
+    margin-bottom: 5vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -95,7 +144,7 @@ html, body{
 .node-logo1, .node-logo2{
     fill-opacity: 1;
     fill: transparent;
-    stroke-width:0.5;
+    stroke-width:0.7;
     stroke-opacity:1;
     stroke-dasharray: 100%;
     stroke-dashoffset: 100%;
@@ -137,4 +186,14 @@ html, body{
     15% {transform: translateY(5px);}
     20% {transform: translateY(0px);}
     100% {transform: translateY(0px);}
+}
+
+@keyframes borderAppearance{
+    0%  {border:transparent solid;}
+    100%  {border:white solid;}
+}
+
+@keyframes borderDisappearance{
+    0%  {border:white solid;}
+    100%  {border:transparent solid;}
 }
