@@ -19,6 +19,14 @@
     </head>
 
     <body>
+
+        <!-- nav bar -->
+        <div class='nav_container'>
+            <a class='nav_btn'>My Projects</a>
+            <a class='nav_btn' href='#about'>About Me</a>
+
+        </div>
+
         <!-- Start of header Div -->
         <div class="header" id='start' style="position: relative;z-index: 2;">
             <!-- <ul id="scene">
@@ -92,8 +100,8 @@
             </div>
             <!-- Header div -->
             <section class="header-title">
-                <a href='#start', id='studio-name-container', style="display: flex; justify-content: center; align-items: center; position: fixed; top:2vh; z-index:1">
-                    <h1 class = "header-titletext" id="studio-name">
+                <a href='#start', id='studio-name-container', style="display: flex; justify-content: center; align-items: center; position: fixed; top:2vh; z-index:0">
+                    <h1 class = "header-titletext">
                         Lemon Orange
                     </h1>
                 </a>
@@ -104,11 +112,11 @@
             </section>
 
             <a href="https://github.com/LemonOrangeWasTaken" style = "position: fixed;
-            right:53%;
-            bottom: 53%;
-            transform: translate(49vw,49vh)">
+            right:53vw;
+            bottom: 55vh;
+            transform: translate(50vw,50vh)">
                 <img id='gitLogo', class="imageBtn" src="assets/githubLogo.png" alt="Check out my Github!"
-                style="width:calc(4vh + 4vw)">
+                style="width:calc(4vh + 4vw); max-width: 100px">
             </a>
 
             <a href="#about">

@@ -2,6 +2,7 @@ var animLogo1;
 var animIdentity;
 // logo stowing animation
 logoStowed = false;
+navStowed = false;
 
 const textBoxWidth = document.querySelector('#studio-name-container').offsetWidth
 const sleep = (delay) => new Promise((resolve) => setTimeout(resolve, delay))
@@ -83,7 +84,8 @@ async function loopDesk(){
 }
 
 window.addEventListener('scroll', () => {
-    if(window.innerWidth >= 1000 || !isMobile()){
+    if(window.innerWidth >= 1000 && !isMobile()){
+        // LOGO STOW ANIMATION START
         if(window.scrollY >= 50){
             if(!logoStowed){
                 anime({
@@ -107,6 +109,34 @@ window.addEventListener('scroll', () => {
             }
             logoStowed = false
         }
+        // LOGO STOW ANIMATION END
+
+        // NAV BUTTON ANIMATION START
+        if(window.scrollY >= 50){
+            if(!navStowed){
+                anime({
+                    targets:'.nav_btn',
+                    translateY: [-200, 0],
+                    easing:'easeOutQuart',
+                    duration:500,
+                    delay: anime.stagger(30)
+                })
+            }
+            navStowed = true
+        } if(window.scrollY < 50){
+            if(navStowed){
+                anime({
+                    targets:'.nav_btn',
+                    translateY: [0,-200],
+                    easing:'easeOutQuart',
+                    duration:500,
+                    delay: anime.stagger(30)
+                })
+            }
+            navStowed = false
+        }
+        // NAV BUTTON ANIMATION END
+
     } else {
         if(logoStowed){
             anime({
@@ -118,6 +148,17 @@ window.addEventListener('scroll', () => {
             })
         }
         logoStowed = false
+
+        if(navStowed){
+            anime({
+                targets:'.nav_btn',
+                translateY: [0,-200],
+                easing:'easeOutQuart',
+                duration:500,
+                delay: anime.stagger(30)
+            })
+        }
+        navStowed = false
     }
 })
 
@@ -129,4 +170,7 @@ function isMobile() {
 
 window.onload = () => {
     initializeAnimation()
+    anime.set('.nav_btn', {
+        translateY: -200,
+    })
 }
