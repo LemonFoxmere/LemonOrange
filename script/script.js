@@ -25,8 +25,8 @@ function initializeAnimation(){
         targets: '.node-logo1',
         strokeDashoffset: ['100%', '0%'],
         easing: 'easeInOutCubic',
-        duration:1300,
-        delay: anime.stagger(100)
+        duration:1700,
+        // delay: anime.stagger(100)
     }, '+=500')
     timeline.add({ //fillin logo
         targets:'#bottomL, #bottomS',
@@ -83,84 +83,46 @@ async function loopDesk(){
     loopDesk()
 }
 
-window.addEventListener('scroll', () => {
+setInterval(() => {
     if(window.innerWidth >= 1000 && !isMobile()){
         // LOGO STOW ANIMATION START
-        if(window.scrollY >= 50){
-            if(!logoStowed){
-                anime({
-                    targets:'#studio-name-container',
-                    translateX: '-35vw',
-                    easing:'easeOutQuart',
-                    backgroundColor: 'rgba(24,28,31,0)',
-                    duration:500,
-                })
-            }
-            logoStowed = true
-        } if(window.scrollY < 50){
-            if(logoStowed){
-                anime({
-                    targets:'#studio-name-container',
-                    translateX: '0vw',
-                    easing:'easeOutQuart',
-                    backgroundColor: 'rgba(0,0,0,0)',
-                    duration:500,
-                })
-            }
-            logoStowed = false
-        }
-        // LOGO STOW ANIMATION END
-
-        // NAV BUTTON ANIMATION START
-        if(window.scrollY >= 50){
-            if(!navStowed){
-                anime({
-                    targets:'.nav_btn',
-                    translateY: [-200, 0],
-                    easing:'easeOutQuart',
-                    duration:500,
-                    delay: anime.stagger(30)
-                })
-            }
-            navStowed = true
-        } if(window.scrollY < 50){
-            if(navStowed){
-                anime({
-                    targets:'.nav_btn',
-                    translateY: [0,-200],
-                    easing:'easeOutQuart',
-                    duration:500,
-                    delay: anime.stagger(30)
-                })
-            }
-            navStowed = false
-        }
-        // NAV BUTTON ANIMATION END
-
-    } else {
-        if(logoStowed){
+        if(!logoStowed){
             anime({
                 targets:'#studio-name-container',
-                translateX: '0vw',
+                translateX: '-35vw',
                 easing:'easeOutQuart',
-                backgroundColor: 'rgba(0,0,0,0)',
+                backgroundColor: 'rgba(24,28,31,0)',
                 duration:500,
             })
-        }
-        logoStowed = false
-
-        if(navStowed){
             anime({
                 targets:'.nav_btn',
-                translateY: [0,-200],
+                translateY: [-200, 0],
                 easing:'easeOutQuart',
                 duration:500,
-                delay: anime.stagger(30)
+                delay: anime.stagger(50)
             })
+            logoStowed = true
         }
-        navStowed = false
     }
-})
+    else if (logoStowed === true){
+        anime({
+            targets:'#studio-name-container',
+            translateX: '0vw',
+            easing:'easeOutQuart',
+            backgroundColor: 'rgba(0,0,0,0)',
+            duration:500,
+        })
+        anime({
+            targets:'.nav_btn',
+            translateY: [0,-200],
+            easing:'easeOutQuart',
+            duration:500,
+            delay: anime.stagger(50)
+        })
+        logoStowed = false
+    }
+    // LOGO STOW ANIMATION END
+},100)
 
 function isMobile() {
     let check = false;

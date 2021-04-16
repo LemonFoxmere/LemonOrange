@@ -55,10 +55,6 @@
     fill: #2B323A;
 }
 
-.bgdeco{
-    object-fit: cover;
-}
-
 .content-page.sub2{
     background-color: #181c1f;
 
@@ -170,6 +166,7 @@ html, body{
     scroll-behavior: smooth;
     margin:0;
     overflow-x: hidden;
+    background-color: #181c1f;
 }
 
 /* animation part */
