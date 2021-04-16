@@ -24,9 +24,9 @@ function initializeAnimation(){
     timeline.add({ //set a stagger of filling in stroke dash offset, giving an illusion of drawing logo
         targets: '.node-logo1',
         strokeDashoffset: ['100%', '0%'],
-        easing: 'easeInOutQuad',
-        duration:2000,
-        delay: anime.stagger(300)
+        easing: 'easeInOutCubic',
+        duration:1300,
+        delay: anime.stagger(100)
     }, '+=500')
     timeline.add({ //fillin logo
         targets:'#bottomL, #bottomS',
@@ -35,14 +35,14 @@ function initializeAnimation(){
         fill : '#ff8700',
         duration:300,
         strokeOpacity : 0
-    }, '-=00')
+    }, '+=700')
     timeline.add({ //fillin logo
         targets:'#topL, #topS',
         fill : '#ffc000',
         easing:'easeOutQuart',
         duration:300,
         strokeOpacity : 0
-    }, '-=200')
+    }, '-=300')
     
     timeline.add({duration:animationDisplayTime}) //add wait time
     // logo 1 finalization
