@@ -4,7 +4,6 @@ var animIdentity;
 logoStowed = false;
 navStowed = false;
 
-const textBoxWidth = document.querySelector('#studio-name-container').offsetWidth
 const sleep = (delay) => new Promise((resolve) => setTimeout(resolve, delay))
 descriptionRoot = 'Hello, I am '
 mobileDesk = 'Hello, I am a software developer'
@@ -83,46 +82,7 @@ async function loopDesk(){
     loopDesk()
 }
 
-setInterval(() => {
-    if(window.innerWidth >= 1000 && !isMobile()){
-        // LOGO STOW ANIMATION START
-        if(!logoStowed){
-            anime({
-                targets:'#studio-name-container',
-                translateX: '-35vw',
-                easing:'easeOutQuart',
-                backgroundColor: 'rgba(24,28,31,0)',
-                duration:500,
-            })
-            anime({
-                targets:'.nav_btn',
-                translateY: [-200, 0],
-                easing:'easeOutQuart',
-                duration:500,
-                delay: anime.stagger(50)
-            })
-            logoStowed = true
-        }
-    }
-    else if (logoStowed === true){
-        anime({
-            targets:'#studio-name-container',
-            translateX: '0vw',
-            easing:'easeOutQuart',
-            backgroundColor: 'rgba(0,0,0,0)',
-            duration:500,
-        })
-        anime({
-            targets:'.nav_btn',
-            translateY: [0,-200],
-            easing:'easeOutQuart',
-            duration:500,
-            delay: anime.stagger(50)
-        })
-        logoStowed = false
-    }
-    // LOGO STOW ANIMATION END
-},100)
+
 
 function isMobile() {
     let check = false;
@@ -132,7 +92,4 @@ function isMobile() {
 
 window.onload = () => {
     initializeAnimation()
-    anime.set('.nav_btn', {
-        translateY: -200,
-    })
 }
