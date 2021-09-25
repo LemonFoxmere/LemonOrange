@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../../aiVis"
+		},
+		{
+			"path": ".."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "websites"
+	}
+}
