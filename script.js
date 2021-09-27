@@ -5,43 +5,40 @@ logoStowed = false;
 navStowed = false;
 
 const sleep = (delay) => new Promise((resolve) => setTimeout(resolve, delay))
-descriptionRoot = 'Hello, I am '
-mobileDesk = 'Hello, I am a software developer'
-description = ['a software developer', 'an AI researcher', 'a maker', 'a UI designer', 'a person']
 
-var rellax = new Rellax('.rellax');
+var rellax = new Rellax(".rellax");
 
 const animationDisplayTime = 5000
 
 function initializeAnimation(){
-    const timeline = anime.timeline({ //initialize animation 1 (lemon orange)
+    const timeline = anime.timeline({ //initialize animation
         ease: "easeInOutQuad",
         autoplay : false,
         duration:500,
         loop:1,
     });
     timeline.add({ //set a stagger of filling in stroke dash offset, giving an illusion of drawing logo
-        targets: '.node-logo1',
-        strokeDashoffset: ['100%', '0%'],
-        easing: 'easeInOutCubic',
+        targets: ".node-logo1",
+        strokeDashoffset: ["100%", "0%"],
+        easing: "easeInOutCubic",
         duration:1700,
         // delay: anime.stagger(100)
-    }, '+=500')
+    }, "+=500")
     timeline.add({ //fillin logo
-        targets:'#bottomL, #bottomS',
-        fillOpacity : ['0%','100%'],
-        easing:'easeOutQuart',
-        fill : '#ff8700',
+        targets:"#bottomL, #bottomS",
+        fillOpacity : ["0%","100%"],
+        easing:"easeOutQuart",
+        fill : "#ff8700",
         duration:300,
         strokeOpacity : 0
-    }, '+=700')
+    }, "+=300")
     timeline.add({ //fillin logo
-        targets:'#topL, #topS',
-        fill : '#ffc000',
-        easing:'easeOutQuart',
+        targets:"#topL, #topS",
+        fill : "#ffc000",
+        easing:"easeOutQuart",
         duration:300,
         strokeOpacity : 0
-    }, '-=300')
+    }, "-=300")
     
     timeline.add({duration:animationDisplayTime}) //add wait time
     // logo 1 finalization
@@ -53,36 +50,7 @@ function initializeAnimation(){
         animLogo1.seek(animLogo1.duration );
     }
 
-    descriptionStartup()
 }
-
-async function descriptionStartup(){
-    if(!isMobile()){
-    for(let i = 0; i < descriptionRoot.length; i++){
-        document.querySelector('#identity-thing').innerHTML = descriptionRoot.substring(0,i+1) + ''
-        await sleep(100)
-    }
-    loopDesk()} else {
-        document.querySelector('#identity-thing').innerHTML = mobileDesk
-    }
-}
-
-async function loopDesk(){
-    for(let k = 0; k < description.length; k++){
-        for(let i = 0; i < description[k].length; i++){
-            document.querySelector('#identity-thing').innerHTML = descriptionRoot + description[k].substring(0,i+1) + ''
-            await sleep(100)
-        }
-        await sleep(5000)
-        for(let i = description[k].length-1; i >= 0; i--){
-            document.querySelector('#identity-thing').innerHTML = descriptionRoot + description[k].substring(0,i) + ''
-            await sleep(100)
-        }
-    }
-    loopDesk()
-}
-
-
 
 function isMobile() {
     let check = false;

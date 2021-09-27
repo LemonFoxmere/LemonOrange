@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   id="main-logo"
+   style="width:25vw; height:50vh; position: fixed; z-index: 2; top:25vh;"
+   viewBox="0 0 135.46666 135.46667"
+   version="1.1"
+   sodipodi:docname="LemonOrangeLogoPlain.svg"
+   inkscape:version="1.1 (ce6663b3b7, 2021-05-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs3642" />
+  <sodipodi:namedview
+     id="namedview3640"
+     pagecolor="#505050"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     showgrid="false"
+     inkscape:snap-page="true"
+     inkscape:zoom="5.2938692"
+     inkscape:cx="81.226034"
+     inkscape:cy="52.796922"
+     inkscape:window-width="2560"
+     inkscape:window-height="1286"
+     inkscape:window-x="3440"
+     inkscape:window-y="28"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="main-logo" />
+  <path
+     id="rect3723"
+     style="opacity:1;fill:#ffffff;stroke:#ffffff;stroke-width:0.349293;stroke-linecap:round;stroke-linejoin:round"
+     d="m 43.355682,20.415741 h 48.755299 c 12.708729,0 22.939939,10.231215 22.939939,22.939943 v 48.755307 c 0,12.708729 -10.23121,22.939939 -22.939939,22.939939 H 43.355682 c -12.708728,0 -22.939943,-10.23121 -22.939943,-22.939939 V 43.355684 c 0,-12.708728 10.231215,-22.939943 22.939943,-22.939943 z" />
+  <path
+     class="node-logo1"
+     id="bottomL"
+     d="m 55.033335,40.216667 c 0,-1.058334 1.058332,-2.116667 2.116666,-2.116667 h 4.233334 c 1.058332,0 2.116666,1.058333 2.116666,2.116667 L 63.5,80.433333 h 4.233334 c 1.058332,0 2.116666,1.058332 2.116666,2.116666 l 1e-6,4.233334 c 0,1.058333 -1.058334,2.116667 -2.116666,2.116667 H 57.150001 c -1.058334,0 -2.116666,-1.058334 -2.116666,-2.116667 V 40.216667"
+     style="stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4; stroke:#ff8700" />
+  <path
+     class="node-logo1"
+     id="bottomS"
+     d="m 84.666661,80.433334 h 2.116669 c 1.172632,0 2.116665,0.944033 2.116665,2.116666 v 4.233335 c 0,1.172633 -0.944033,2.116666 -2.116665,2.116666 h -2.116669 c -1.172633,0 -2.116666,-0.944033 -2.116666,-2.116666 V 82.55 c 0,-1.172633 0.944033,-2.116666 2.116666,-2.116666 z"
+     style="stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4; stroke:#ff8700" />
+  <path
+     class="node-logo1"
+     id="topL"
+     d="m 78.316666,97.366665 c 1.058334,0 2.116666,-1.058332 2.116666,-2.116666 V 48.683333 c 0,-1.058333 -1.058332,-2.116667 -2.116666,-2.116667 H 67.733332 c -1.058332,0 -2.116666,1.058334 -2.116666,2.116667 l 1e-6,4.233334 c 0,1.058334 1.058334,2.116666 2.116666,2.116666 h 4.233334 l -10e-7,40.216666 c 0,1.058334 1.058334,2.116666 2.116666,2.116666 h 4.233334"
+     style="stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4; stroke: #ffc000" />
+  <path
+     class="node-logo1"
+     id="topS"
+     d="m 48.683333,46.566666 h 2.116665 c 1.172634,0 2.116668,0.944033 2.116668,2.116667 v 4.233331 c 0,1.172634 -0.944034,2.116668 -2.116668,2.116668 h -2.116665 c -1.172634,0 -2.116667,-0.944034 -2.116667,-2.116668 v -4.233331 c 0,-1.172634 0.944033,-2.116667 2.116667,-2.116667 z"
+     style="stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4; stroke: #ffc000" />
+</svg>

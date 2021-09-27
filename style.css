@@ -1,0 +1,211 @@
+*{
+    margin:0;
+    font-family: 'Poppins', 'sans-serif'
+}
+
+html, body{
+    /* scroll-behavior: smooth; */
+    overflow-x: hidden;
+    background-color: #181c1f;
+}
+
+.unselectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
+/* TEXT STYLE START */
+p{
+    cursor: inherit;
+    font-weight: 400;
+    margin:0;
+    font-size: clamp(0.05rem, min(1.7vh, 1vw), 1rem);
+    z-index: 1;
+}
+.legal p{
+    font-size: 0.75rem;
+}
+
+h1{
+    cursor: inherit;
+    font-weight: 300;
+    font-size: clamp(0.5rem, min(7vh, 5vw), 7rem);
+    letter-spacing: 5px;
+    z-index: 1;
+}
+.legal h1{
+    font-size: 2.5rem;
+}
+
+h2{
+    cursor: inherit;
+    font-weight: 400;
+    font-size: clamp(0.5rem, min(4vh, 4vw), 4rem);
+    letter-spacing: 5px;
+    z-index: 1;
+}
+.legal h2{
+    font-size: 2rem;
+}
+
+h3{
+    cursor: inherit;
+    font-size: clamp(0.3rem, min(2.5vh, 2.5vw), 3rem);
+    font-weight: 400;
+    z-index: 1;
+}
+.legal h3{
+    font-size: 1.5rem;
+}
+
+h4{
+    cursor: inherit;
+    font-size: clamp(0.2rem, min(2vh, 1.3vw), 2.5rem);
+    font-weight: 500;
+    z-index: 1;
+    opacity: 1;
+}
+.legal h4{
+    font-size: 1.2rem;
+}
+
+h5{
+    cursor: inherit;
+    z-index: 1;
+}
+.legal h5{
+    font-size: 1rem;
+}
+
+.copyrightmsg{
+    font-size: clamp(0.075rem, min(1.5vh, 1.5vw), 1.3rem);
+}
+
+/* TEXT STYLE END */
+
+/* anchor tags */
+a{
+    color: rgb(69, 165, 255);
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+/* trigger style */
+.trigger{
+    opacity:0;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* content pages */
+
+/* Nav bar */
+.nav_container{
+    position: fixed;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row-reverse;
+    width:100%;
+    background-color: transparent;
+    padding: 1.2vh 0 1.2vh 0;
+
+    backdrop-filter: blur(8px);
+    background-color: #0e1113bb;
+}
+
+.connection-btn{
+    opacity: 1;
+    transition: all 230ms cubic-bezier(0.260, 0.050, 0.250, 1.000); /* custom */
+}
+.connection-btn:hover{
+    opacity: 0.5
+}
+
+.nav_btn{
+    text-decoration: none;
+
+    outline: none;
+
+    background-color: transparent;
+    height:100%;
+    border-radius: 1000px;
+
+    padding:0;
+    margin: 0 1vw 0 1vw;
+    
+    color:rgb(184, 184, 184);
+    
+    cursor: pointer;
+    letter-spacing: 0.5px;
+
+    transition: all 230ms cubic-bezier(0.260, 0.050, 0.250, 1.000); /* custom */
+       
+}
+
+.nav_btn:hover{
+    text-decoration: none;
+    color:rgb(255, 255, 255);
+}
+
+.disable{
+    pointer-events: none
+}
+
+/* page-container sections */
+.page-container{
+    overflow: hidden;
+    background-color: #181c1f;
+    /* background-color: transparent; */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    
+    /* text colors */
+    color:white;
+}
+
+/* animation part */
+
+.node-logo1{
+    fill-opacity: 1;
+    fill: transparent;
+    stroke-width:0.2px;
+    stroke-opacity:1;
+    stroke-dasharray: 100%;
+    stroke-dashoffset: 100%;
+}
+
+/* continuous animations */
+.cont-btn{
+    animation-name: vBob;
+    animation-duration: 4000ms;
+    animation-iteration-count: infinite;
+    animation-delay: 2000ms;
+}
+
+/* event listeners for special buttons */
+
+/* bobbing up and down */
+@keyframes vBob {
+    0%   {transform: translateY(0px);}
+    5% {transform: translateY(5px);}
+    10% {transform: translateY(0px);}
+    15% {transform: translateY(5px);}
+    20% {transform: translateY(0px);}
+    100% {transform: translateY(0px);}
+}
