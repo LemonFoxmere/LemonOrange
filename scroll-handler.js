@@ -17,7 +17,7 @@ let about_tl = anime.timeline({
     easing: "easeInSine",
     duration: 500,
     update: (anim) => { // enable the buttons
-        if(anim.progress > 1){
+        if(anim.progress > 50){
             document.getElementById("about-text").classList.remove("disable")
         } else { // disable them when scrolling back
             document.getElementById("about-text").classList.add("disable")
@@ -29,17 +29,6 @@ let about_tl = anime.timeline({
     opacity: 1,
     easing: "linear",
     duration: 1000,
-    update: (anim) => { // enable the buttons
-        if(anim.progress > 1){
-            document.querySelectorAll(".connection-btn").forEach(e => {
-                e.classList.remove("disable")
-            });
-        } else { // disable them when scrolling back
-            document.querySelectorAll(".connection-btn").forEach(e => {
-                e.classList.add("disable")
-            });
-        }
-    },
 },"-=100")
 // show the projects page
 about_tl.add({ // hide about text first
@@ -49,7 +38,7 @@ about_tl.add({ // hide about text first
     easing: "easeOutSine",
     duration: 500,
     update: (anim) => { // disable the buttons
-        if(anim.progress > 99){
+        if(anim.progress > 50){
             document.getElementById("about-text").classList.add("disable")
         } else { // enable them when scrolling
             document.getElementById("about-text").classList.remove("disable")
@@ -79,8 +68,16 @@ let pages = {
     'about' : { // about page
         trigger : document.getElementById("about-trigger"),
         after : (reached,value)=>{
-            about_tl.seek(value*2);
+            about_tl.seek(value);
         },
+        before: () => { // pretty much reset the logo
+            anime({ // logo movement
+                targets: "#main-logo",
+                translateX: "0",
+                easing: "easeInOutSine",
+                duration: 10
+            })
+        }
     },
 }
 
@@ -94,6 +91,8 @@ setInterval((e) => {
         let page_rect = page.trigger.getBoundingClientRect()
         if(page_rect.y < load_trigger.getBoundingClientRect().y){
             page.after(page.reached, Math.abs(page_rect.y - load_trigger.getBoundingClientRect().y))
+        } else {
+            page.before()
         }
     });
 })
@@ -102,23 +101,28 @@ setInterval((e) => {
 document.getElementById("home").addEventListener("click", () => {
     smoothScroll({
         yPos:0,
-        duration:1500,
+        duration:2000,
         easing:smoothScroll.easing.easeOutSine
     })
 })
 
 document.getElementById("about").addEventListener("click", () => {
     smoothScroll({
-        yPos:750,
-        duration:1500,
+        yPos:1500,
+        duration:2000,
         easing:smoothScroll.easing.easeOutSine
     })
 })
 
 document.getElementById("projects").addEventListener("click", () => {
     smoothScroll({
-        yPos:1800,
-        duration:1500,
+        yPos:3600,
+        duration:2000,
         easing:smoothScroll.easing.easeOutSine
     })
 })
+
+// check for manual scrolling and stop if detected
+document.body.onwheel = () => {
+    smoothScroll.stopAll()
+}

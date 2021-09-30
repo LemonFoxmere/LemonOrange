@@ -169,6 +169,22 @@ a:hover{
     color:rgb(255, 255, 255);
 }
 
+.card-btn{
+    text-decoration: none;
+    font-family: Montserrat;
+    font-weight: 500;
+    background-color: #0071e3;
+    color:white;
+    padding:0.4vh 0.8vw 0.4vh 0.8vw;
+    border-radius: 100vh;
+    font-size: clamp(0.05rem, min(1.7vh, 1vw), 1rem);
+    margin: 0 0.3vw 0 0.3vw
+}
+
+.card-btn:hover{
+    text-decoration: none;
+}
+
 .disable{
     pointer-events: none
 }
@@ -191,17 +207,18 @@ a:hover{
 /* Create two equal columns that floats next to each other */
 .grid-container{
     height: auto;
-    width:95vw;
+    width:clamp(10vw, 95vw, 100rem);
     display: grid;
     grid-template-columns: repeat(8, 1fr);
     grid-template-rows: auto/auto;
     grid-gap: 20px 20px;
     overflow: hidden;
+    padding: 5vh 5vw 5vh 5vw
 }
 
 .grid-element{
     background-color: #fff;
-    border-radius: 13px;
+    border-radius: min(3vw, 3vh);
     display: flex;
     padding: 1vh 1vw 1vh 1vw;
     color:black;
