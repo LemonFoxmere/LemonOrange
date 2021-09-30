@@ -7,7 +7,7 @@ let about_tl = anime.timeline({
     autoplay: false
 }); about_tl.add({ // logo movement
     targets: "#main-logo",
-    translateX: "-10vw",
+    translateX: "-13vw",
     easing: "easeInOutSine",
     duration: 1000
 }); about_tl.add({ // text appearance
@@ -23,12 +23,12 @@ let about_tl = anime.timeline({
             document.getElementById("about-text").classList.add("disable")
         }
     },
-},"-=400"); about_tl.add({ // about text slowly scroll upwards
+},"-=600"); about_tl.add({ // about text slowly scroll upwards
     targets: "#about-text",
     translateY: "45%",
     opacity: 1,
     easing: "linear",
-    duration: 1500,
+    duration: 1000,
     update: (anim) => { // enable the buttons
         if(anim.progress > 1){
             document.querySelectorAll(".connection-btn").forEach(e => {
@@ -40,7 +40,7 @@ let about_tl = anime.timeline({
             });
         }
     },
-})
+},"-=100")
 // show the projects page
 about_tl.add({ // hide about text first
     targets: "#about-text",
@@ -58,18 +58,28 @@ about_tl.add({ // hide about text first
     },
 })
 
-about_tl.add({ // make logo become a watermark
+// This should calculate everything automatically
+const panel_extend_length = 1000 // unit = vh
+
+about_tl.add({ // show title and panel (rule is 1vh for every 15 time unit)
+    targets: "#project",
+    translateY: ["100vh", `-${panel_extend_length}vh`],
+    easing: "linear",
+    duration: `${15*(panel_extend_length+100)}`,
+}, "-=700"); about_tl.add({ 
     targets: "#main-logo",
-    easing: "easeInOutSine",
-    duration: 1000,
-},"-=200")
+    translateY: "-100vh",
+    easing: "linear",
+    duration: 1500,
+}, `-=${15*(panel_extend_length+100) - 1340}`)
+// offset is always <panel duration - 1340>, where 1340 is the offset
 
 // pages
 let pages = {
     'about' : { // about page
         trigger : document.getElementById("about-trigger"),
         after : (reached,value)=>{
-            about_tl.seek(value);
+            about_tl.seek(value*2);
         },
     },
 }
@@ -92,23 +102,23 @@ setInterval((e) => {
 document.getElementById("home").addEventListener("click", () => {
     smoothScroll({
         yPos:0,
-        duration:1000,
-        easing:smoothScroll.easing.easeOutQuart
+        duration:1500,
+        easing:smoothScroll.easing.easeOutSine
     })
 })
 
 document.getElementById("about").addEventListener("click", () => {
     smoothScroll({
-        yPos:2500,
-        duration:1000,
-        easing:smoothScroll.easing.easeOutQuart
+        yPos:750,
+        duration:1500,
+        easing:smoothScroll.easing.easeOutSine
     })
 })
 
 document.getElementById("projects").addEventListener("click", () => {
     smoothScroll({
-        yPos:4000,
-        duration:1000,
-        easing:smoothScroll.easing.easeOutQuart
+        yPos:1800,
+        duration:1500,
+        easing:smoothScroll.easing.easeOutSine
     })
 })
