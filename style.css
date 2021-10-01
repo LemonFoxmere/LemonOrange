@@ -172,7 +172,7 @@ a:hover{
 .card-btn{
     text-decoration: none;
     font-family: Montserrat;
-    font-weight: 300;
+    font-weight: 500;
     background-color: #0071e3;
     color:white;
     padding-top: 0.5rem;
@@ -180,7 +180,7 @@ a:hover{
     padding-bottom: 0.5rem;
     padding-left: 1rem;
     border-radius: 100vh;
-    font-size: 0.7rem;
+    font-size: 1em;
     margin: 0 0.3vw 0 0.3vw;
 
     transition: all 230ms cubic-bezier(0.260, 0.050, 0.250, 1.000); /* custom */
@@ -214,13 +214,23 @@ a:hover{
 .grid-container{
     height: auto;
     width:clamp(10vw, 95vw, 100rem);
-    display: grid;
-    grid-template-columns: repeat(8,1fr);
+    display: grid;      
     max-width: 100%;
-    grid-template-rows: auto/auto;
     grid-gap: 20px 20px;
     overflow: hidden;
     padding: 5vh 5vw 5vh 5vw
+}
+
+@media (min-width: 100px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 900px) {
+    .grid-container {
+        grid-template-columns: 3fr 2fr;
+    }
 }
 
 .grid-element{

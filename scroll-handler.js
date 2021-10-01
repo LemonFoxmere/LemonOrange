@@ -61,7 +61,7 @@ about_tl.add({ // show title and panel (rule is 1vh for every 20 time unit)
     translateY: "-100vh",
     easing: "linear",
     duration: `${scroll_scaler*100}`,
-}, `-=${scroll_scaler*(panel_extend_length+100) - 90*scroll_scaler}`)
+}, `-=${scroll_scaler*(panel_extend_length+100) - 91*scroll_scaler}`)
 // offset is always <panel duration - 1340>, where 1340 is the offset
 
 // pages
