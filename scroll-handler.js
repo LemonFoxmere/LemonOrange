@@ -49,18 +49,19 @@ about_tl.add({ // hide about text first
 
 // This should calculate everything automatically
 const panel_extend_length = 1000 // unit = vh
+const scroll_scaler = 8
 
-about_tl.add({ // show title and panel (rule is 1vh for every 15 time unit)
+about_tl.add({ // show title and panel (rule is 1vh for every 20 time unit)
     targets: "#project",
     translateY: ["100vh", `-${panel_extend_length}vh`],
     easing: "linear",
-    duration: `${15*(panel_extend_length+100)}`,
+    duration: `${scroll_scaler*(panel_extend_length+100)}`,
 }, "-=700"); about_tl.add({ 
     targets: "#main-logo",
     translateY: "-100vh",
     easing: "linear",
-    duration: 1500,
-}, `-=${15*(panel_extend_length+100) - 1340}`)
+    duration: `${scroll_scaler*100}`,
+}, `-=${scroll_scaler*(panel_extend_length+100) - 90*scroll_scaler}`)
 // offset is always <panel duration - 1340>, where 1340 is the offset
 
 // pages
@@ -116,7 +117,7 @@ document.getElementById("about").addEventListener("click", () => {
 
 document.getElementById("projects").addEventListener("click", () => {
     smoothScroll({
-        yPos:3600,
+        yPos:2750,
         duration:2000,
         easing:smoothScroll.easing.easeOutSine
     })

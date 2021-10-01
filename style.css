@@ -172,17 +172,23 @@ a:hover{
 .card-btn{
     text-decoration: none;
     font-family: Montserrat;
-    font-weight: 500;
+    font-weight: 300;
     background-color: #0071e3;
     color:white;
-    padding:0.4vh 0.8vw 0.4vh 0.8vw;
+    padding-top: 0.5rem;
+    padding-right: 1rem;
+    padding-bottom: 0.5rem;
+    padding-left: 1rem;
     border-radius: 100vh;
-    font-size: clamp(0.05rem, min(1.7vh, 1vw), 1rem);
-    margin: 0 0.3vw 0 0.3vw
+    font-size: 0.7rem;
+    margin: 0 0.3vw 0 0.3vw;
+
+    transition: all 230ms cubic-bezier(0.260, 0.050, 0.250, 1.000); /* custom */
 }
 
 .card-btn:hover{
     text-decoration: none;
+    background-color: #005ab5;
 }
 
 .disable{
@@ -209,7 +215,8 @@ a:hover{
     height: auto;
     width:clamp(10vw, 95vw, 100rem);
     display: grid;
-    grid-template-columns: repeat(8, 1fr);
+    grid-template-columns: repeat(8,1fr);
+    max-width: 100%;
     grid-template-rows: auto/auto;
     grid-gap: 20px 20px;
     overflow: hidden;
@@ -217,11 +224,11 @@ a:hover{
 }
 
 .grid-element{
-    background-color: #fff;
+    background-color: #202425;
     border-radius: min(3vw, 3vh);
     display: flex;
     padding: 1vh 1vw 1vh 1vw;
-    color:black;
+    color:white;
     flex-direction: column;
 }
 
