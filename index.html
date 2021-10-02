@@ -181,24 +181,8 @@
                             color:whitesmoke; z-index: 2; left:50vw;'>
                         <!-- The cards -->
                         
-                        <!-- DEEP FUSION -->
-                        <div class="grid-element" style="justify-content:center; align-items:center;
-                        color:rgb(255, 255, 255); background-color: transparent; background-image:url(assets/dfbanner.svg);
-                        background-size: cover; background-position: center; background-repeat:no-repeat; height:35em">
-
-                            <!-- <h1 style="font-size: clamp(0.5rem, min(7vh, 5vw), 8rem);font-weight:500">
-                                Deep
-                                <span style="background:-webkit-radial-gradient(circle, rgba(255,132,0,1) 0%, rgba(255,0,216,1) 53%, rgba(110,0,255,1) 100%);
-                                -webkit-background-clip: text; -webkit-text-fill-color:transparent; margin-left: calc(clamp(0.5rem, min(7vh, 5vw), 8rem)*-0.2);
-                                background-position:0px -1rem;">
-                                    Fusion
-                                </span>
-                            </h1>
-                            <h3>Innovation, simplified.</h3> -->
-                        </div>
-                        
                         <!-- DEEP LEARNING M2M -->
-                        <div class="grid-element" style="background-size: cover; align-items: center; justify-content: center;">
+                        <div id="m2m" class="grid-element" style="background-size: cover; align-items: center; justify-content: center;">
                             <h1 style="font-size: clamp(0.5rem, min(7vh, 5vw), 8rem);font-weight:500">
                                DLM2M
                                 <span style="background:-webkit-radial-gradient(circle, rgb(0, 211, 0) 0%, rgb(0, 174, 255) 43%, rgba(110,0,255,1) 80%);
@@ -207,8 +191,43 @@
                                     2.0
                                 </span>
                             </h1>
+                            <h3>Not as good as Google, but it works.</h3>
+
+                            <!-- show more btn -->
+                            <img id="m2m-btn" class="card-info-btn" src="assets/card-info-btn.svg" alt="">
+
+                            <!-- cover -->
+                            <div id="m2m-cover" class="grid-element-cover disable" style="background:-webkit-linear-gradient(90deg, rgb(140, 0, 255) 0%, rgb(0, 167, 95) 100%);
+                            align-items: flex-start; justify-content: center;">
+                                
+                                <h1 style="margin-left:1.5rem;">
+                                    Lorem ipsum
+                                </h1>
+                                 <h3 style="margin-left:1.5rem; width:60%">
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus tempora necessitatibus sapiente vel amet sequi voluptatibus distinctio modi perspiciatis. Quasi expedita magnam dolore vitae repellendus id inventore minima nisi labore!
+                                </h3>
+                            </div>
                         </div>
 
+                        <!-- DEEP FUSION -->
+                        <div id="deepfusion" class="grid-element" style="justify-content:center; align-items:center;
+                        color:rgb(255, 255, 255); background-color: transparent; background-image:url(assets/dfbanner.svg);
+                        background-size: cover; background-position: center; background-repeat:no-repeat; height:35em">
+
+                            <!-- show more btn -->
+                            <img id="deepfusion-btn" class="card-info-btn" style="filter:brightness(0.1)" src="assets/card-info-btn.svg" alt="">
+
+                            <!-- the cover -->
+                            <div id="deepfusion-cover" class="grid-element-cover disable" style="background-color: rgb(245, 67, 67); color:white;
+                            justify-content: center;">
+                                <h1 style="margin-left:1.5rem;">
+                                    Lorem ipsum
+                                </h1>
+                                 <h3 style="margin-left:1.5rem; width:80%">
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus tempora necessitatibus sapiente vel amet sequi voluptatibus distinctio modi perspiciatis. Quasi expedita magnam dolore vitae repellendus id inventore minima nisi labore!
+                                </h3>
+                            </div>
+                        </div>
 
                     </section>
                 </section>
@@ -226,6 +245,7 @@
         <script src="script/rellax.min.js"></script>
         <script src="script.js"></script>
         <script src="scroll-handler.js"></script>
+        <script src="card-handler.js"></script>
         <script src="script/parallax.min.js"></script>
         <script src="https://cdn.jsdelivr.net/gh/LieutenantPeacock/SmoothScroll@1.2.0/src/smoothscroll.min.js" integrity="sha384-UdJHYJK9eDBy7vML0TvJGlCpvrJhCuOPGTc7tHbA+jHEgCgjWpPbmMvmd/2bzdXU" crossorigin="anonymous"></script>
     </body>

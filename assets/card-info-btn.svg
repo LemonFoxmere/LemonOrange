@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="512"
+   height="512"
+   viewBox="0 0 135.46666 135.46667"
+   version="1.1"
+   id="svg33908"
+   sodipodi:docname="card-info-btn.svg"
+   inkscape:version="1.1 (c4e8f9e, 2021-05-24)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview33910"
+     pagecolor="#505050"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:document-units="px"
+     showgrid="false"
+     units="px"
+     width="512px"
+     inkscape:snap-page="true"
+     inkscape:zoom="1.2720848"
+     inkscape:cx="194.16945"
+     inkscape:cy="249.98334"
+     inkscape:window-width="1440"
+     inkscape:window-height="872"
+     inkscape:window-x="0"
+     inkscape:window-y="28"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1"
+     inkscape:snap-global="false" />
+  <defs
+     id="defs33905" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       id="path34585"
+       style="fill:#ffffff;stroke:none;stroke-width:50.0001;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
+       d="M 256 0 A 255.99999 255.99999 0 0 0 0 256 A 255.99999 255.99999 0 0 0 256 512 A 255.99999 255.99999 0 0 0 512 256 A 255.99999 255.99999 0 0 0 256 0 z M 256 112.13477 C 265.25801 112.13477 272.71094 119.58769 272.71094 128.8457 L 272.71094 239.28906 L 383.1543 239.28906 C 392.41233 239.28906 399.86523 246.74199 399.86523 256 C 399.86523 265.25801 392.41233 272.71094 383.1543 272.71094 L 272.71094 272.71094 L 272.71094 383.1543 C 272.71094 392.41229 265.25801 399.86523 256 399.86523 C 246.74199 399.86523 239.28906 392.41229 239.28906 383.1543 L 239.28906 272.71094 L 128.8457 272.71094 C 119.58769 272.71094 112.13477 265.25801 112.13477 256 C 112.13477 246.74199 119.58769 239.28906 128.8457 239.28906 L 239.28906 239.28906 L 239.28906 128.8457 C 239.28906 119.58769 246.74199 112.13477 256 112.13477 z "
+       transform="scale(0.26458333)" />
+  </g>
+</svg>
