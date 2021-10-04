@@ -117,7 +117,7 @@ document.getElementById("about").addEventListener("click", () => {
 
 document.getElementById("projects").addEventListener("click", () => {
     smoothScroll({
-        yPos:2750,
+        yPos:2800,
         duration:2000,
         easing:smoothScroll.easing.easeOutSine
     })
