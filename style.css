@@ -27,6 +27,7 @@ p{
     font-size: clamp(0.05rem, min(1.7vh, 1vw), 1rem);
     z-index: 1;
 }
+
 .legal p{
     font-size: 0.75rem;
 }
@@ -46,7 +47,6 @@ h2{
     cursor: inherit;
     font-weight: 600;
     font-size: clamp(0.5rem, min(4vh, 4vw), 4rem);
-    letter-spacing: 5px;
     z-index: 1;
 }
 .legal h2{
@@ -55,7 +55,7 @@ h2{
 
 h3{
     cursor: inherit;
-    font-size: clamp(0.3rem, min(2.5vh, 2.5vw), 3rem);
+    font-size: clamp(0.3rem, min(2.5vh, 2vw), 3rem);
     font-weight: 500;
     z-index: 1;
 }
@@ -90,8 +90,12 @@ h5{
 
 /* anchor tags */
 a{
-    color: rgb(85, 112, 138);
+    color: rgb(0, 132, 255);
     text-decoration: none;
+    line-height: 0;
+    cursor: pointer;
+
+    margin: 0 0.5rem 0 0.5rem;
 }
 
 a:hover{
@@ -120,10 +124,9 @@ a:hover{
     justify-content: center;
     flex-direction: row-reverse;
     width:100%;
-    background-color: transparent;
-    padding: 0.5em 0 0.5em 0;
+    padding: 0.7em 0 0.7em 0;
 
-    background-color: #0e1113ce;
+    background-color: #181c1fb8;
 }
 
 .nav_container p{
@@ -135,16 +138,36 @@ a:hover{
     position: absolute;
     width: 100%;
     height: 100%;
-    backdrop-filter: blur(18px);
-    -webkit-backdrop-filter: blur(18px);
+    backdrop-filter: blur(12px) brightness(0.7);
+    -webkit-backdrop-filter: blur(12px);
 }
 
-.connection-btn{
+.connection-btn-container{
+    margin: 0 0.15vw 0 0.15vw;
+
+    text-decoration: none;
     opacity: 1;
     transition: all 230ms cubic-bezier(0.260, 0.050, 0.250, 1.000); /* custom */
 }
-.connection-btn:hover{
-    opacity: 0.5
+.connection-btn-container:hover{
+    opacity: 0.5;
+    text-decoration: none;
+}
+
+.learn-more-btn{
+    --triggered:0;
+}
+
+.show-more-btn{
+    --triggered:0;
+    width:2.5rem;
+    height:2.5rem;
+    border:none;
+    border-radius: 100%;
+    cursor:pointer;
+    position: absolute;
+    right:1.5rem;
+    bottom:1.5rem;
 }
 
 .card-info-btn{
@@ -189,23 +212,24 @@ a:hover{
 .card-btn{
     text-decoration: none;
     font-family: Montserrat;
-    font-weight: 500;
+    font-weight: 300;
     background-color: #0071e3;
     color:white;
-    padding-top: 0.5rem;
-    padding-right: 1rem;
-    padding-bottom: 0.5rem;
-    padding-left: 1rem;
+    padding: 0.4rem 1rem 0.4rem 1rem;
+    margin: 0 0.5rem 0 0.5rem;
+
     border-radius: 100vh;
-    font-size: 1em;
-    margin: 0 0.3vw 0 0.3vw;
+    font-size: 1rem;
+    border: none;
+
+    cursor:pointer;
 
     transition: all 230ms cubic-bezier(0.260, 0.050, 0.250, 1.000); /* custom */
 }
 
 .card-btn:hover{
     text-decoration: none;
-    background-color: #005ab5;
+    background-color: #0058b1;
 }
 
 .disable{
@@ -233,51 +257,21 @@ a:hover{
     width:clamp(10vw, 95vw, 100rem);
     display: grid;      
     max-width: 100%;
-    grid-gap: 20px 20px;
+    grid-gap: 15px 15px;
     overflow: hidden;
-    padding: 5vh 5vw 5vh 5vw
-}
-
-@media (min-width: 0px) {
-    .grid-container {
-        grid-template-columns: 1fr;
-    }
-    #m2m{
-        grid-row:2;
-    }
-}
-
-@media (min-width: 900px) {
-    .grid-container {
-        grid-template-columns: 2fr 3fr;
-    }
-    #m2m{
-        grid-row:1;
-    }
+    padding: 5rem;
 }
 
 .grid-element{
     background-color: #202425;
     border-radius: 1.5em;
     display: flex;
-    padding: 1vh 1vw 1vh 1vw;
+    padding: 0;
     color:white;
     flex-direction: column;
     position: relative;
-}
-
-.grid-element-cover{
-    opacity:0;
-
-    border-radius: 1.5em;
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    width:100%;
     height:100%;
-    z-index: 1;
-
-    transition: all 400ms cubic-bezier(0.260, 0.050, 0.250, 1.000); /* custom */
+    margin:0;
 }
 
 /* animation part */

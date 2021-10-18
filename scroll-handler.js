@@ -1,75 +1,17 @@
 // load trigger
 const load_trigger = document.getElementById("load-trigger")
-
-// timelines
-let about_tl = anime.timeline({
-    direction:'alternate',
-    autoplay: false
-}); about_tl.add({ // logo movement
-    targets: "#main-logo",
-    translateX: "-13vw",
-    easing: "easeInOutSine",
-    duration: 1000
-}); about_tl.add({ // text appearance
-    targets: "#about-text",
-    translateY: ["60%", "55%"],
-    opacity: 1,
-    easing: "easeInSine",
-    duration: 500,
-    update: (anim) => { // enable the buttons
-        if(anim.progress > 50){
-            document.getElementById("about-text").classList.remove("disable")
-        } else { // disable them when scrolling back
-            document.getElementById("about-text").classList.add("disable")
-        }
-    },
-},"-=600"); about_tl.add({ // about text slowly scroll upwards
-    targets: "#about-text",
-    translateY: "45%",
-    opacity: 1,
-    easing: "linear",
-    duration: 1000,
-},"-=100")
-// show the projects page
-about_tl.add({ // hide about text first
-    targets: "#about-text",
-    translateY: "40%",
-    opacity: 0,
-    easing: "easeOutSine",
-    duration: 500,
-    update: (anim) => { // disable the buttons
-        if(anim.progress > 50){
-            document.getElementById("about-text").classList.add("disable")
-        } else { // enable them when scrolling
-            document.getElementById("about-text").classList.remove("disable")
-
-        }
-    },
-})
-
-// This should calculate everything automatically
-const panel_extend_length = 1000 // unit = vh
-const scroll_scaler = 8
-
-about_tl.add({ // show title and panel (rule is 1vh for every 20 time unit)
-    targets: "#project",
-    translateY: ["100vh", `-${panel_extend_length}vh`],
-    easing: "linear",
-    duration: `${scroll_scaler*(panel_extend_length+100)}`,
-}, "-=700"); about_tl.add({ 
-    targets: "#main-logo",
-    translateY: "-100vh",
-    easing: "linear",
-    duration: `${scroll_scaler*100}`,
-}, `-=${scroll_scaler*(panel_extend_length+100) - 91*scroll_scaler}`)
-// offset is always <panel duration - 1340>, where 1340 is the offset
+let on_mobile = () => {return window.innerWidth < 600}
 
 // pages
 let pages = {
     'about' : { // about page
         trigger : document.getElementById("about-trigger"),
         after : (reached,value)=>{
-            about_tl.seek(value);
+            if(!on_mobile()){
+                about_tl.seek(value);
+            } else {
+                about_tl_mobile.seek(value);
+            }
         },
         before: () => { // pretty much reset the logo
             anime({ // logo movement
@@ -100,30 +42,13 @@ setInterval((e) => {
 
 // add navigation button events
 document.getElementById("home").addEventListener("click", () => {
-    smoothScroll({
-        yPos:0,
-        duration:2000,
-        easing:smoothScroll.easing.easeOutSine
-    })
+    new SmoothScroll().animateScroll(0)
 })
 
 document.getElementById("about").addEventListener("click", () => {
-    smoothScroll({
-        yPos:1500,
-        duration:2000,
-        easing:smoothScroll.easing.easeOutSine
-    })
+    new SmoothScroll().animateScroll(1500)
 })
 
 document.getElementById("projects").addEventListener("click", () => {
-    smoothScroll({
-        yPos:2800,
-        duration:2000,
-        easing:smoothScroll.easing.easeOutSine
-    })
+    new SmoothScroll().animateScroll(3750)
 })
-
-// check for manual scrolling and stop if detected
-document.body.onwheel = () => {
-    smoothScroll.stopAll()
-}

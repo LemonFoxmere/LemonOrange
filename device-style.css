@@ -1,0 +1,136 @@
+/* Mobile */
+@media (min-width: 0px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+
+    /* connection buttons */
+    #connections{
+        align-self: center;
+    } .connection-btn{
+        width: clamp(1.5rem, 3vw, 3rem);
+        margin: 1rem 0.3 rem 0 0.3rem
+    }
+
+    /* about texts */
+    #about-text{
+        text-align: center;
+    }#about-text-end-sep, #about-text-start-sep{
+        align-self: center;
+    }
+
+    /* project texts */
+    #project-intro{
+        transform: translateX(-50%);
+        align-items: center;
+        text-align: center;
+        top:calc(0.5rem - clamp(2rem, 7vw, 3em));
+    }
+
+    /* m2m panel */
+    #m2m{
+        grid-row:2;
+    }
+
+    /* DeepFusion panel */
+    #deepfusion{
+        flex-direction: column
+    }
+    #deepfusion h1{
+        font-size: 3rem;
+        line-height: 3.5rem;
+    }
+    #deepfusion h2{
+        font-size: 1.25rem;
+        line-height: 2.25rem;
+        text-align: center;
+    }
+    #deepfusion-tc{
+        margin: 1.5rem 0 0 0
+    }
+
+    /* about texts */
+    #about-text{
+        color:red
+    }
+}
+/* ^ Mobile ^ */
+
+/* v Tablet v */
+@media (min-width: 600px) { 
+    /* connection buttons */
+    #connections{
+        align-self: flex-end;
+    }.connection-btn{
+        width: clamp(1.5rem, 1vw, 2.5rem);
+        margin: 0.1rem 0.05rem 0 0.05rem
+    }
+
+    /* about texts */
+    #about-text{
+        left:50vw
+    }
+
+    .grid-container {
+        grid-template-columns: 3fr 2fr;
+    }
+
+    /* project texts */
+    #project-intro{
+        transform: translateX(0%);
+        align-items: flex-start;
+        text-align: left;
+        top:calc(-10vh - clamp(2rem, 7vw, 3em));
+        padding-bottom: 2vh
+    }
+
+    /* about texts */
+    #about-text{
+        text-align: left;
+    }#about-text-end-sep{
+        align-self: flex-end;
+    }#about-text-start-sep{
+        align-self: flex-start;
+    }
+
+    /* m2m panel */
+    #m2m{
+        grid-row:2;
+    }
+
+    /* DeepFusion panel */
+    #deepfusion{
+        flex-direction: row;
+        grid-column: 1/3;
+    }
+    #deepfusion h1{
+        font-size: 4rem;
+        line-height: 4.5rem;
+    }
+    #deepfusion h2{
+        font-size: 1.75rem;
+        line-height: 2.75rem;
+        text-align: left;
+    }
+    #deepfusion-tc{
+        margin: 0 0 0 2rem
+    }
+}
+/* ^ Tablet ^ */
+
+/* v PC v */
+@media (min-width: 1000px) {
+    .grid-container {
+        grid-template-columns: 2fr 3fr;
+    }
+
+    /* m2m panel */
+    #m2m{
+        grid-row:1;
+    }
+
+    /* DeepFusion panel */
+    #deepfusion{
+        grid-column: 2;
+    }
+}

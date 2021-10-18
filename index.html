@@ -5,7 +5,10 @@
             LemonOrange
         </title>
         <meta lang="en">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="device-style.css">
         
         <!-- fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">  
@@ -16,10 +19,9 @@
     </head>
 
     <body>
-
         <!-- nav bar -->
         <div class="nav_container">
-            <p class="nav_btn unselectable" onclick="window.location.href = 'https://www.reddit.com/r/cats/'">
+            <p class="nav_btn unselectable" onclick="redirect('https://www.reddit.com/r/cats/')">
                 Cat
             </p>
             
@@ -44,7 +46,7 @@
             <!-- logo -->
             <svg
             id="main-logo"
-            style="width:25vw; height:50vh; position: fixed; z-index: 2; top:25vh;"
+            style="width:clamp(1rem, 50vw, 25em); height:clamp(1rem, 50vw, 25em); position: fixed; z-index: 2; top:calc(50vh - clamp(1rem, 50vw, 25em)/2)"
             xmlns:dc="http://purl.org/dc/elements/1.1/"
             xmlns:cc="http://creativecommons.org/ns#"
             xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -85,12 +87,13 @@
             <!-- home page -->
             <section style="height:100vh; width:100vw; display:flex; align-items:center; justify-content:center;">
                 <!-- logo text -->
-                <section id="logo-text" class="unselectable" style="display:flex; position:absolute;"> 
-                    <h2 style='margin-right:0; z-index: 1; white-space:nowrap;'>
-                        I do stuff
+                <section id="logo-text" class="unselectable" style="display:flex; position:absolute; letter-spacing: 5px;
+                font-size: clamp(0.2rem, 6vw, 2em);"> 
+                    <h2 style='margin-right:0; z-index: 1; white-space:nowrap; font-weight: 300; font-size: inherit;'>
+                        I do stuf
                     </h2>
-                    <h2 style="z-index:3;white-space:nowrap;">
-                        .. I guess
+                    <h2 style="z-index:3;white-space:nowrap; font-weight: 300; font-size: inherit;">
+                        f; I guess
                     </h2>
                     <!-- <h3 style="color:gray">
                         *
@@ -108,69 +111,67 @@
                 <a class="trigger" id="about-trigger" style='position:absolute; top:25vh'>about</a>
 
                 <!-- about text -->
-                <section id="about-text" class="disable" style='opacity:0; width:25vw; position:fixed; bottom:50vh; left:50vw; transform:translateY(50%); color: white; z-index: 2;'>
-                    <h3>
+                <section id="about-text" class="disable" style='opacity:0; width:75%; position:fixed;
+                bottom:50vh; color: white; z-index: 2; left:50vw; transform:translateX(-50%);
+                display: flex; flex-direction: column;'>
+                    <h2 style="font-weight:400; font-size: 2rem; width: 100%;">
                         <strong>About me</strong>
-                    </h3>
-                    <hr style='width:10%; margin-left:0.5%; margin:1vh 0 1vh 0'>
-                    <p>
+                    </h2>
+                    <hr id="about-text-start-sep" style='width:10vw; margin:1vh 0 1vh 0.5rem'>
+                    <p style="margin-top:0.4rem; font-size: 0.8rem;">
                         &emsp;I'm a "software developer" in California, and I like to make stuff with my little understanding of AI and 
-                        Deep learning.
+                        Deep learning. I am also insufferable when it comes to making UI look good.
                     </p>
-                    <p style="margin-top:1vh">
+                    <p style="margin-top:0.4rem; font-size: 0.8rem;">
                         &emsp;I started programming in 2015 with Java, solely because Minecraft was programmed in it.
                         However, I soon lived to regret that decision, as I never made any minecraft mods or done anything useful with it
                         because afterall, I was using a language that CollegeBoard endorses.
                     </p>
-                    <p style="margin-top:1vh">
+                    <p style="margin-top:0.4rem; font-size: 0.8rem;">
                         &emsp;Fast forward a year or two, I finally turned a new leaf and started doing Python and JavaScript dev.
                         And thanks to the power of interpreted languages, I unlocked my true power of creating shit software.
                     </p>
-                    <p style="margin-top:1vh">
+                    <p style="margin-top:0.4rem; font-size: 0.8rem;">
                         &emsp;Everyone got scared of me for my power and distanced themself for their safety.
                         Since that day I've been alone with nothing but my powerful skill. So to pass my time I like to
                         create random projects to post on YouTube and make shitty websites to pretend
                         that they look good.
                     </p>
-                    <hr style='width:10%; margin-left:0.5%; margin:1vh 0 1vh 0'>
-                    <p style="margin-top:1vh">
-                        <strong>
-                            If you wanna see some of my things, just keep scrolling.
-                        </strong>
+                    <hr id="about-text-end-sep" style='width:10vw; margin:1vh 0.5rem 1vh 0;'>
+                    <p id="about-text-end-sep" style="margin-top:0.4rem; font-size: 0.8rem; font-weight: 600; ">
+                        If you wanna see some of my things, just keep scrolling.
                     </p>
 
                     <!-- youtube and twitter stuff -->
-                    <section id="connections" style='margin-top: 2vh'>
-                        <a href="https://github.com/LemonOrangeWasTaken" class="connection-btn" style="text-decoration:none; margin: 0 0.1vw 0 0.1vw;">
-                            <img style="width:1.3vw" src="assets/github-connection.svg" alt="github">
+                    <section id="connections" style='margin-top: clamp(1px, min(1vw, 1vh), 2em);'>
+                        <a href="https://github.com/LemonOrangeWasTaken" class="connection-btn-container style="text-decoration:none;">
+                            <img class="connection-btn" src="assets/github-connection.svg" alt="github">
                         </a>
-                        <a href="https://twitter.com/LemonOrangeTW" class="connection-btn" style="text-decoration:none; margin: 0 0.1vw 0 0.1vw;">
-                            <img style="width:1.3vw" src="assets/twitter-connection.svg" alt="twitter">
+                        <a href="https://twitter.com/LemonOrangeTW" class="connection-btn-container" style="text-decoration:none">
+                            <img class="connection-btn" src="assets/twitter-connection.svg" alt="twitter">
                         </a>
-                        <a href="https://www.reddit.com/user/The747IsDead" class="connection-btn" style="text-decoration:none; margin: 0 0.1vw 0 0.1vw;">
-                            <img style="width:1.3vw" src="assets/reddit-connection.svg" alt="reddit">
+                        <a href="https://www.reddit.com/user/The747IsDead" class="connection-btn-container" style="text-decoration:none">
+                            <img class="connection-btn" src="assets/reddit-connection.svg" alt="reddit">
                         </a>
-                        <a href="https://www.youtube.com/channel/UCut2xeBl7HcPEPatqpEUoQw" class="connection-btn" style="text-decoration:none; margin: 0 0.1vw 0 0.1vw;">
-                            <img style="width:1.3vw" src="assets/youtube-connection.svg" alt="youtube">
+                        <a href="https://www.youtube.com/channel/UCut2xeBl7HcPEPatqpEUoQw" class="connection-btn-container" style="text-decoration:none;">
+                            <img class="connection-btn" src="assets/youtube-connection.svg" alt="youtube">
                         </a>
-                        <!-- <a href="" class="connection-btn disable" style="text-decoration:none; margin: 0 0.1vw 0 0.1vw;">
-                            <img style="width:1.3vw" src="assets/linkedin-connection.svg" alt="linkedin">
-                        </a> -->
                     </section>
                 </section>
 
-                <section id="project" style='width:100vw; position:fixed; bottom:50vh; transform:translateY(50%); color: white; z-index: 2;'>
+                <section id="project" style='width:100vw; position:fixed; bottom:50vh; margin-bottom:1vh; color: white; z-index: 2;'>
                     <!-- project title -->
-                    <section style="position:absolute; left:49vw; transform: translateY(-100%);">
-                        <h1 style="font-weight: 500">
+                    <section id="project-intro" style="position:absolute; left:50vw;
+                    display: flex; flex-direction: column; width:100%">
+                        <h1 style="font-weight: 500; font-size: 3rem">
                             My Things
                         </h1>
                         <hr style="width:20%; margin: min(0.5vw,1vh) 0 min(1vw,2vh) 0.8vw;">
-                        <h3>
+                        <h3 style="font-size: 0.8rem;">
                             Some are shitty websites, some are actual projects.
                         </h3>
-                        <p>
-                            Regardless, they can all found on my <a href="https://github.com/LemonOrangeWasTaken" style="color:white; font-weight: 800;">
+                        <p style="font-size: 0.7rem">
+                            Regardless, they can all found on my <a href="https://github.com/LemonOrangeWasTaken" style="color:white; font-weight: 800; margin:0">
                                 GitHub
                             </a>.
                         </p>
@@ -183,70 +184,58 @@
                         
                         <!-- DEEP LEARNING M2M -->
                         <div id="m2m" class="grid-element" style="background-size: cover; align-items: center; justify-content: center;">
-                            <h1 style="font-size: clamp(0.5rem, min(7vh, 5vw), 8rem);font-weight:500">
+                            <h1 style="font-size: 4rem;font-weight:500">
                                DLM2M
                                 <span style="background:-webkit-radial-gradient(circle, rgb(0, 211, 0) 0%, rgb(0, 174, 255) 43%, rgba(110,0,255,1) 80%);
                                 -webkit-background-clip: text; -webkit-text-fill-color:transparent;
-                                background-position: 0rem 0.5rem;font-weight:700">
+                                background-position: 0rem 0.5rem; font-weight:700">
                                     2.0
                                 </span>
                             </h1>
-                            <h3>Not as good as Google, but it works.</h3>
-
-                            <!-- show more btn -->
-                            <img id="m2m-btn" class="card-info-btn" src="assets/card-info-btn.svg" alt="">
-
-                            <!-- cover -->
-                            <div id="m2m-cover" class="grid-element-cover disable" style="background:-webkit-linear-gradient(90deg, rgb(140, 0, 255) 0%, rgb(0, 167, 95) 100%);
-                            align-items: flex-start; justify-content: center;">
-                                
-                                <h1 style="margin-left:1.5rem;">
-                                    Lorem ipsum
-                                </h1>
-                                 <h3 style="margin-left:1.5rem; width:60%">
-                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus tempora necessitatibus sapiente vel amet sequi voluptatibus distinctio modi perspiciatis. Quasi expedita magnam dolore vitae repellendus id inventore minima nisi labore!
-                                </h3>
-                            </div>
+                            <h3>An AI powered MIDI transcriber.</h3>
                         </div>
 
                         <!-- DEEP FUSION -->
+                        
                         <div id="deepfusion" class="grid-element" style="justify-content:center; align-items:center;
-                        color:rgb(255, 255, 255); background-color: transparent; background-image:url(assets/dfbanner.svg);
-                        background-size: cover; background-position: center; background-repeat:no-repeat; height:35em">
+                        color:rgb(26, 26, 26); background-color: #f3f3f3; min-height: 35em;">
+                            <img src="assets/df_logo.svg" alt="DeepFusion Logo" style="height:6.5em">
+                            <section id="deepfusion-tc" style="display: flex; flex-direction: column; justify-content: center;">
+                                <h1 style="font-weight: 300; line-height: clamp(0.5rem, min(7vh, 5vw), 7rem);">DeepFusion</h1>
+                                <h2 style="font-weight: 300; width:100%;">Innovation, simplified.<sup style="color:rgb(174, 174, 174); cursor: context-menu;" title="*Objectively False">*</sup></h2>
+                            </section>
+
+                            <!-- buttons at the bottom -->
+                            <section style="position:absolute; bottom:1.5rem; display: flex; align-items: center">
+                                <button class="card-btn" onclick="redirect('https://deepfusion.org')">Launch</button>
+                                <a class="learn-more-btn" onclick="redirect('https://github.com/LemonOrangeWasTaken/DeepFusion')">View Source</a>
+                            </section>
 
                             <!-- show more btn -->
-                            <img id="deepfusion-btn" class="card-info-btn" style="filter:brightness(0.1)" src="assets/card-info-btn.svg" alt="">
-
-                            <!-- the cover -->
-                            <div id="deepfusion-cover" class="grid-element-cover disable" style="background-color: rgb(245, 67, 67); color:white;
-                            justify-content: center;">
-                                <h1 style="margin-left:1.5rem;">
-                                    Lorem ipsum
-                                </h1>
-                                 <h3 style="margin-left:1.5rem; width:80%">
-                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus tempora necessitatibus sapiente vel amet sequi voluptatibus distinctio modi perspiciatis. Quasi expedita magnam dolore vitae repellendus id inventore minima nisi labore!
-                                </h3>
-                            </div>
+                            <img src="assets/card-info-btn.svg" id="deepfusion-sm" class="show-more-btn"></img>
                         </div>
 
                     </section>
                 </section>
             </section>
             <!-- End of HOME Div -->
-            
+
             <!-- copyright -->
             <p class='copyrightmsg unselectable' style="position: relative; bottom:0.5vh; width:100%; text-align:center;color:gray; z-index:100;">
                 Copyright &copy; 2021 LemonOrange
             </p>
         </section>
 
-
         <script src="script/anime.min.js"></script>
         <script src="script/rellax.min.js"></script>
         <script src="script.js"></script>
-        <script src="scroll-handler.js"></script>
         <script src="card-handler.js"></script>
-        <script src="script/parallax.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/gh/LieutenantPeacock/SmoothScroll@1.2.0/src/smoothscroll.min.js" integrity="sha384-UdJHYJK9eDBy7vML0TvJGlCpvrJhCuOPGTc7tHbA+jHEgCgjWpPbmMvmd/2bzdXU" crossorigin="anonymous"></script>
+        <script src="load-handler.js"></script>
+
+        <script src="script/animations/mobile.js"></script>
+        <script src="script/animations/desktop.js"></script>
+        <script src="scroll-handler.js"></script>
+
+        <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15/dist/smooth-scroll.polyfills.min.js"></script>
     </body>
 </html>
