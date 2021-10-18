@@ -78,5 +78,5 @@ about_tl_mobile.add({
     translateY: "-100vh",
     easing: "linear",
     duration: `${scroll_scaler*100}`,
-}, `-=${scroll_scaler*(panel_extend_length+100) - 85*scroll_scaler}`)
+}, `-=${scroll_scaler*(panel_extend_length+100) - 82*scroll_scaler}`)
 // offset is always <panel duration - 1340>, where 1340 is the offset

@@ -24,7 +24,7 @@
         transform: translateX(-50%);
         align-items: center;
         text-align: center;
-        top:calc(0.5rem - clamp(2rem, 7vw, 3em));
+        top:calc(-1rem - clamp(2rem, 7vw, 3em));
     }
 
     /* m2m panel */

@@ -166,12 +166,12 @@
                         <h1 style="font-weight: 500; font-size: 3rem">
                             My Things
                         </h1>
-                        <hr style="width:20%; margin: min(0.5vw,1vh) 0 min(1vw,2vh) 0.8vw;">
-                        <h3 style="font-size: 0.8rem;">
+                        <hr style="width: 20vw; max-width:4rem; margin: min(0.5vw,1vh) 0 min(1vw,2vh) 0;">
+                        <h3 style="font-size: 1rem;">
                             Some are shitty websites, some are actual projects.
                         </h3>
-                        <p style="font-size: 0.7rem">
-                            Regardless, they can all found on my <a href="https://github.com/LemonOrangeWasTaken" style="color:white; font-weight: 800; margin:0">
+                        <p style="font-size: 0.8rem">
+                            Regardless, they can all be found on my <a href="https://github.com/LemonOrangeWasTaken" style="color:white; font-weight: 800; margin:0">
                                 GitHub
                             </a>.
                         </p>
@@ -193,12 +193,15 @@
                                 </span>
                             </h1>
                             <h3>An AI powered MIDI transcriber.</h3>
+
+                            <img src="assets/card-info-btn.svg" id="m2m-sm" class="show-more-btn"
+                            style="filter: brightness(1)"></img>
                         </div>
 
                         <!-- DEEP FUSION -->
                         
                         <div id="deepfusion" class="grid-element" style="justify-content:center; align-items:center;
-                        color:rgb(26, 26, 26); background-color: #f3f3f3; min-height: 35em;">
+                        color:rgb(26, 26, 26); background-color: #f3f3f3; min-height: 35em; height:80vh">
                             <img src="assets/df_logo.svg" alt="DeepFusion Logo" style="height:6.5em">
                             <section id="deepfusion-tc" style="display: flex; flex-direction: column; justify-content: center;">
                                 <h1 style="font-weight: 300; line-height: clamp(0.5rem, min(7vh, 5vw), 7rem);">DeepFusion</h1>
@@ -207,12 +210,17 @@
 
                             <!-- buttons at the bottom -->
                             <section style="position:absolute; bottom:1.5rem; display: flex; align-items: center">
-                                <button class="card-btn" onclick="redirect('https://deepfusion.org')">Launch</button>
+                                <button class="card-btn" onclick="redirect('https://deepfusion.org')">
+                                    <p>
+                                        Launch
+                                    </p>
+                                </button>
                                 <a class="learn-more-btn" onclick="redirect('https://github.com/LemonOrangeWasTaken/DeepFusion')">View Source</a>
                             </section>
 
                             <!-- show more btn -->
-                            <img src="assets/card-info-btn.svg" id="deepfusion-sm" class="show-more-btn"></img>
+                            <img src="assets/card-info-btn.svg" id="deepfusion-sm" class="show-more-btn"
+                            style="filter: brightness(0.1)"></img>
                         </div>
 
                     </section>
