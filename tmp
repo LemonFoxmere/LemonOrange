@@ -1,165 +1,4 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>
-            LemonOrange
-        </title>
-        <meta lang="en">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-
-        <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="device-style.css">
-        
-        <!-- fonts -->
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">  
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900;1000&display=swap" rel="stylesheet"> 
-        
-        <!-- favicon -->
-        <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-    </head>
-
-    <body>
-        <!-- animation load trigger -->
-        <a class="trigger" id="load-trigger" style='position:fixed; right:0; top:50vh; z-index:100'>trigger</a>
-
-        <!-- Start of page container -->
-        <section class="page-container" style="position: relative; z-index: 2;">
-            <!-- nav bar -->
-            <div class="nav_container">
-                <p class="nav_btn unselectable" onclick="redirect('https://www.reddit.com/r/cats/')">
-                    Cat
-                </p>
-                
-                <p id="projects" class="nav_btn unselectable">
-                    Projects
-                </p>
-                
-                <p id="about" class="nav_btn unselectable">
-                    About
-                </p>
-
-                <p id="home" class="nav_btn unselectable">
-                    Home
-                </p>
-            </div>
-            
-            <!-- logo -->
-            <svg
-            id="main-logo"
-            style="width:25rem; height:25rem; position: fixed; z-index: 2; margin-top:calc(50vh - 25rem/2); z-index: 2;"
-            xmlns:dc="http://purl.org/dc/elements/1.1/"
-            xmlns:cc="http://creativecommons.org/ns#"
-            xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-            xmlns:svg="http://www.w3.org/2000/svg"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 135.46666 135.46667">
-            <g style="display:inline;opacity:1">
-
-                <path
-                class="node-logo1"
-                id = "bottomL"
-                d="m 55.033335,40.216667 c 0,-1.058334 1.058332,-2.116667 2.116666,-2.116667 h 4.233334 c 1.058332,0 2.116666,1.058333 2.116666,2.116667 L 63.5,80.433333 h 4.233334 c 1.058332,0 2.116666,1.058332 2.116666,2.116666 l 1e-6,4.233334 c 0,1.058333 -1.058334,2.116667 -2.116666,2.116667 H 57.150001 c -1.058334,0 -2.116666,-1.058334 -2.116666,-2.116667 V 40.216667"
-                style="stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4; stroke:#ff8700"
-                />
-                
-                <path
-                class="node-logo1"
-                id="bottomS"
-                d="m 84.666661,80.433334 h 2.116669 c 1.172632,0 2.116665,0.944033 2.116665,2.116666 v 4.233335 c 0,1.172633 -0.944033,2.116666 -2.116665,2.116666 h -2.116669 c -1.172633,0 -2.116666,-0.944033 -2.116666,-2.116666 V 82.55 c 0,-1.172633 0.944033,-2.116666 2.116666,-2.116666 z"
-                style="stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4; stroke:#ff8700;" />
-                
-                <path
-                class="node-logo1"
-                id="topL"
-                d="m 78.316666,97.366665 c 1.058334,0 2.116666,-1.058332 2.116666,-2.116666 V 48.683333 c 0,-1.058333 -1.058332,-2.116667 -2.116666,-2.116667 H 67.733332 c -1.058332,0 -2.116666,1.058334 -2.116666,2.116667 l 1e-6,4.233334 c 0,1.058334 1.058334,2.116666 2.116666,2.116666 h 4.233334 l -10e-7,40.216666 c 0,1.058334 1.058334,2.116666 2.116666,2.116666 h 4.233334"
-                style="stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4; stroke: #ffc000" />
-                
-                <path
-                class="node-logo1"
-                id="topS"
-                d="m 48.683333,46.566666 h 2.116665 c 1.172634,0 2.116668,0.944033 2.116668,2.116667 v 4.233331 c 0,1.172634 -0.944034,2.116668 -2.116668,2.116668 h -2.116665 c -1.172634,0 -2.116667,-0.944034 -2.116667,-2.116668 v -4.233331 c 0,-1.172634 0.944033,-2.116667 2.116667,-2.116667 z"
-                style="stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4; stroke: #ffc000" />
-
-                
-            </g>
-            </svg>
-            
-            <!-- home page -->
-            <section style="height:100vh; width:100vw; display:flex; align-items:center; justify-content:center;">
-                <!-- logo text -->
-                <section id="logo-text" class="unselectable" style="display:flex; position:absolute; letter-spacing: 5px;
-                font-size: clamp(0.2rem, 6vw, 2em);"> 
-                    <h2 style='margin-right:0; z-index: 1; white-space:nowrap; font-weight: 300; font-size: inherit;'>
-                        I do stuf
-                    </h2>
-                    <h2 style="z-index:3;white-space:nowrap; font-weight: 300; font-size: inherit;">
-                        f; I guess
-                    </h2>
-                    <!-- <h3 style="color:gray">
-                        *
-                    </h3> -->
-                </section>
-                
-                <section style="text-align: center">
-                    <h3 style="position: absolute; left:50%; top:67%; transform: translate(-50%, -50%); font-size: min(calc(1.3vh + 1.3vw), 1.7em); font-family: 'Poppins'; font-weight: 300; " id="identity-thing"></h3>
-                </section>
-            </section>
-
-            <!-- about and project (whole animation) page -->
-            <section style="height:2500px; width:100vw; display:flex; align-items:center; justify-content:center; position:relative">
-                <!-- add animation load trigger -->
-                <a class="trigger" id="about-trigger" style='position:absolute; top:0vh'>about</a>
-                <a class="trigger" id="about-exit-trigger" style='position:absolute; bottom:0vh'>about exit</a>
-                <!-- about text -->
-                <section id="about-text" class="disable" style='opacity:0; width:75%; position:fixed;
-                bottom:50vh; color: white; z-index: 2; left:50vw; transform:translateX(-50%);
-                display: flex; flex-direction: column;'>
-                    <h2 style="font-weight:400; font-size: 2rem; width: 100%;">
-                        <strong>About me</strong>
-                    </h2>
-                    <hr id="about-text-start-sep" style='width:10vw; margin:1vh 0 1vh 0.5rem'>
-                    <p style="margin-top:0.4rem; font-size: 0.8rem;">
-                        &emsp;I'm a developer in California, and I to make stuff with my little understanding of web tech and 
-                        Deep Learning.
-                    </p>
-                    <p style="margin-top:0.4rem; font-size: 0.8rem;">
-                        &emsp;I started programming in 2015 with Java, solely because Minecraft was programmed in it.
-                        However, I soon lived to regret that decision, as I never made any minecraft mods or done anything useful with it
-                        because afterall, I was using a language that CollegeBoard endorses.
-                    </p>
-                    <p style="margin-top:0.4rem; font-size: 0.8rem;">
-                        &emsp;Fast forward a year or two, I finally turned a new leaf and started doing Python and JavaScript dev.
-                        And thanks to the power of interpreted languages, I unlocked my true power of creating shit software.
-                    </p>
-                    <p style="margin-top:0.4rem; font-size: 0.8rem;">
-                        &emsp;Everyone got scared of me for my power and distanced themself for their safety.
-                        Since that day I've been alone with nothing but my powerful skill. So to pass my time I like to
-                        create random projects to post on YouTube and make shitty websites to pretend
-                        that they look good.
-                    </p>
-
-                    <!-- youtube and twitter stuff -->
-                    <section id="connections">
-                        <a href="https://github.com/LemonOrangeWasTaken" class="connection-btn-container style="text-decoration:none;">
-                            <img class="connection-btn" src="assets/github-connection.svg" alt="github">
-                        </a>
-                        <a href="https://twitter.com/LemonOrangeTW" class="connection-btn-container" style="text-decoration:none">
-                            <img class="connection-btn" src="assets/twitter-connection.svg" alt="twitter">
-                        </a>
-                        <a href="https://www.reddit.com/user/The747IsDead" class="connection-btn-container" style="text-decoration:none">
-                            <img class="connection-btn" src="assets/reddit-connection.svg" alt="reddit">
-                        </a>
-                        <a href="https://www.youtube.com/channel/UCut2xeBl7HcPEPatqpEUoQw" class="connection-btn-container" style="text-decoration:none;">
-                            <img class="connection-btn" src="assets/youtube-connection.svg" alt="youtube">
-                        </a>
-                    </section>
-                </section>
-            </section>
-            <!-- End of HOME Div -->
-
-            <!-- Start of Project div -->
-            <section style="height:7500px; width:100vw; display:flex; align-items:flex-start; justify-content:center;">
-                <section id="project" style='width:100vw;margin-bottom:2vh; color: white; z-index: 2;transform:translateY(100vh);'>
+<section id="project" style='width:100vw; position:fixed; bottom:50vh; margin-bottom:2vh; color: white; z-index: 2;'>
                     <!-- project title -->
                     <section id="project-intro" style="position:absolute;
                     display: flex; flex-direction: column; width:100%">
@@ -170,13 +9,10 @@
                         <h3 style="font-size:100%; margin:0">
                             Some are shitty websites, some aren't (websites).
                         </h3>
-
-                        <!-- add the project load trigger -->
-                        <a class="trigger" id="project-trigger" style='position:absolute;'>about</a>
                     </section>
 
                     <!-- project panel, which moves with the title -->
-                    <section class="grid-container" style='position: relative; transform: translate(-50%, 5%);
+                    <section class="grid-container" style='position: absolute; transform: translate(-50%, 5%);
                             color:whitesmoke; z-index: 2; left:50vw;'>
                         <!-- The cards -->
                         
@@ -341,35 +177,7 @@
                             style="filter: brightness(1)"></img>
                         </div>
 
-                        <h3 style="width:100%; text-align: center; grid-column: 1/11; font-weight: 300;">...And even more on my
-                            <a style="color:white; margin:0; font-weight: 600">GitHub</a>!</h3>
-                        </h3>
+                        <!-- <a class="trigger" id="contact-trigger" style='margin-top:5rem'>contact</a> -->
                     </section>
-                    <img src="assets/endgradient.svg" alt="" preserveAspectRatio="none"
-                        style="border:none;bottom:0; width:100%; z-index: 1; margin-top: 5rem; transform: scaleY(200vh); margin-bottom:0;">
 
-                    <div style="width:100vw; height:99999px; transform: translateY(-1%); background-color: #0b1015; margin-top:0; position:relative"></div>
                 </section>
-                <img src="assets/holder.gif" alt="end" style="position:absolute; bottom:0; z-index: 2; margin-bottom:50vh; transform: translateY(50%);">
-            </section>
-
-            <!-- copyright -->
-            <p class='copyrightmsg unselectable' style="position: relative; bottom:0.75rem; width:100%; text-align:center;color:gray; z-index:100;">
-                Copyright &copy; 2021 LemonOrange | Business email: <a style="margin:0;" href="mailto: lemon@thelemonorange.com">lemon@thelemonorange.com</a>
-            </p>
-        </section>
-
-        <script src="script/anime.min.js"></script>
-        <script src="script/rellax.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
-        <script src="script.js"></script>
-        <script src="card-handler.js"></script>
-        <script src="load-handler.js"></script>
-
-        <script src="script/animations/mobile.js"></script>
-        <script src="script/animations/desktop.js"></script>
-        <script src="scroll-handler.js"></script>
-
-        <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15/dist/smooth-scroll.polyfills.min.js"></script>
-    </body>
-</html>

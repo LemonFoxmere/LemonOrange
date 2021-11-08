@@ -1,10 +1,11 @@
 // load trigger
 const load_trigger = document.getElementById("load-trigger")
-let on_mobile = () => {return window.innerWidth < 600}
+let on_mobile = () => {return window.innerWidth < 700}
 
 // pages
 let pages = {
     'about' : { // about page
+        reached : false,
         trigger : document.getElementById("about-trigger"),
         after : (reached,value)=>{
             if(!on_mobile()){
@@ -22,22 +23,39 @@ let pages = {
             })
         }
     },
+    'project' : { // project page
+        reached : false,
+        trigger : document.getElementById("project-trigger"),
+        after : (reached,value)=>{
+            let offset = document.getElementById("project-trigger").getBoundingClientRect().y - load_trigger.getBoundingClientRect().y
+            if(!on_mobile()){
+                document.getElementById("main-logo").style.top = `${offset}px`
+            } else {
+                document.getElementById("main-logo").style.top = `${offset}px`
+            }
+        },
+        before: () => { // pretty much reset the logo
+            document.getElementById("main-logo").style.top = `0px`
+        }
+    },
 }
 
 // check triggers on scroll
 setInterval((e) => {
     // go through pages
-    Object.keys(pages).forEach(key => {
+    let page_keys = Object.keys(pages).slice().reverse()
+    for(let i = 0; i < page_keys.length; i++){
+        key = page_keys[i]
         let page = pages[key]
 
         // get the page's bounding rect
         let page_rect = page.trigger.getBoundingClientRect()
-        if(page_rect.y < load_trigger.getBoundingClientRect().y){
+        if(page_rect.y <= load_trigger.getBoundingClientRect().y){
             page.after(page.reached, Math.abs(page_rect.y - load_trigger.getBoundingClientRect().y))
         } else {
             page.before()
         }
-    });
+    }
 })
 
 // add navigation button events
@@ -50,5 +68,9 @@ document.getElementById("about").addEventListener("click", () => {
 })
 
 document.getElementById("projects").addEventListener("click", () => {
-    new SmoothScroll().animateScroll(3750)
+    if(!on_mobile()){
+        new SmoothScroll().animateScroll(3650)
+    } else {
+        new SmoothScroll().animateScroll(3550) // mobile scrolling
+    }
 })

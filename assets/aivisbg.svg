@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?> <!-- Created with Vectornator for iOS (http://vectornator.io/) --><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg height="100%" style="fill-rule:nonzero;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="100%" xmlns:vectornator="http://vectornator.io" version="1.1" viewBox="0 0 2560 1440">
+<metadata>
+<vectornator:setting key="DimensionsVisible" value="1"/>
+<vectornator:setting key="PencilOnly" value="0"/>
+<vectornator:setting key="SnapToPoints" value="0"/>
+<vectornator:setting key="OutlineMode" value="0"/>
+<vectornator:setting key="RulersVisible" value="1"/>
+<vectornator:setting key="GuidesVisible" value="1"/>
+<vectornator:setting key="SnapToEdges" value="1"/>
+<vectornator:setting key="CMYKEnabledKey" value="0"/>
+<vectornator:setting key="DisplayWhiteBackground" value="0"/>
+<vectornator:setting key="doHistoryDisabled" value="0"/>
+<vectornator:setting key="TimeLapseWatermarkDisabled" value="0"/>
+<vectornator:setting key="SnapToGuides" value="1"/>
+<vectornator:setting key="DynamicGuides" value="0"/>
+<vectornator:setting key="IsolateActiveLayer" value="0"/>
+<vectornator:setting key="Units" value="Pixels"/>
+<vectornator:setting key="SnapToGrid" value="0"/>
+</metadata>
+<defs>
+<linearGradient y1="269.577" id="LinearGradient" x1="484.072" y2="1254.44" x2="2168.96" gradientUnits="userSpaceOnUse" gradientTransform="matrix(0.993308 0 0 1 -0.0474764 0)">
+<stop stop-color="#00116a" offset="0"/>
+<stop stop-color="#3400ac" offset="1"/>
+</linearGradient>
+<linearGradient y1="734.923" id="LinearGradient_2" x1="431.438" y2="1199.59" x2="1409.29" gradientUnits="userSpaceOnUse" gradientTransform="matrix(1 0 0 1 3.39894 -14.8268)">
+<stop stop-color="#ff6b4d" offset="0"/>
+<stop stop-color="#ff2c4c" offset="0.979702"/>
+</linearGradient>
+<linearGradient y1="1150.25" id="LinearGradient_3" x1="220.682" y2="954.055" x2="1130.08" gradientUnits="userSpaceOnUse" gradientTransform="matrix(1 0 0 1 0 0)">
+<stop stop-color="#ff9731" offset="0"/>
+<stop stop-color="#ff542c" offset="0.974044"/>
+</linearGradient>
+<linearGradient y1="1406.57" id="LinearGradient_4" x1="133.044" y2="1288.02" x2="588.613" gradientUnits="userSpaceOnUse" gradientTransform="matrix(0.99414 0 0 1 9.0837 0)">
+<stop stop-color="#ffe331" offset="0.00969261"/>
+<stop stop-color="#ff862c" offset="0.990161"/>
+</linearGradient>
+<linearGradient y1="1243.01" id="LinearGradient_5" x1="1.53358" y2="1515.49" x2="343.939" gradientUnits="userSpaceOnUse" gradientTransform="matrix(0.9489 0 0 0.855657 75.6956 143.256)">
+<stop stop-color="#efff38" offset="0.0182718"/>
+<stop stop-color="#ffc642" offset="0.976928"/>
+</linearGradient>
+<linearGradient y1="271.042" id="LinearGradient_6" x1="1050.02" y2="1268.28" x2="2463.28" gradientUnits="userSpaceOnUse" gradientTransform="matrix(0.993724 0 0 1 4.41819 0)">
+<stop stop-color="#ff1efc" offset="0.00872518"/>
+<stop stop-color="#b11cff" offset="0.989176"/>
+</linearGradient>
+<linearGradient y1="227.93" id="LinearGradient_7" x1="2094.86" y2="512.402" x2="1901.13" gradientUnits="userSpaceOnUse" gradientTransform="matrix(1.00117 0 0 1 -1.06501 0)">
+<stop stop-color="#4100da" offset="0"/>
+<stop stop-color="#8200fc" offset="1"/>
+</linearGradient>
+<linearGradient y1="412.154" id="LinearGradient_8" x1="1843.98" y2="152.8" x2="2270.34" gradientUnits="userSpaceOnUse" gradientTransform="matrix(1.0013 0 0 1 -1.40543 0)">
+<stop stop-color="#4f2cff" offset="0"/>
+<stop stop-color="#0d00d5" offset="0.970247"/>
+</linearGradient>
+<linearGradient y1="447.001" id="LinearGradient_9" x1="2198.82" y2="82.6259" x2="2544.69" gradientUnits="userSpaceOnUse" gradientTransform="matrix(0.923803 0 0 1 158.488 0)">
+<stop stop-color="#207fff" offset="0"/>
+<stop stop-color="#00acfc" offset="1"/>
+</linearGradient>
+</defs>
+<g id="Background" vectornator:layerName="Background">
+<path stroke="#f4f4f4" stroke-width="10" d="M-7.09418-17.0471L2558.73-17.0471L2558.73+1454.83L-7.09418+1454.83L-7.09418-17.0471Z" fill="url(#LinearGradient)" stroke-linecap="butt" opacity="1" stroke-linejoin="round"/>
+</g>
+<g id="pattern" vectornator:layerName="pattern">
+<path d="M-3.69524+127.56C-3.69524+127.56+264.436+41.504+448.12+231.458C648.047+438.208+677.173+552.125+853.982+640.203C1192.98+809.076+1309.7+519.638+1591.4+586.746C1873.11+653.853+1933.51+1440+1933.51+1440L-2.39254+1440L-3.69524+127.56Z" opacity="1" fill="url(#LinearGradient_2)"/>
+<path d="M-6.89866+339.372C-6.89866+339.372+348.343+429.58+448.955+714.446C566.272+1046.61+755.67+883.755+1000.56+830.943C1245.45+778.131+1436.12+734.64+1609.73+922.817C1754.35+1079.56+1588.11+1454.83+1588.11+1454.83L-9.7176+1466.83L-6.89866+339.372Z" opacity="1" fill="url(#LinearGradient_3)"/>
+<path d="M-20.4398+777.542C-20.4398+777.542+196.273+661.873+359.886+915.222C523.498+1168.57+872.045+1014.89+1115.5+962.078C1358.96+909.266+1218.59+1187.64+1335.09+1289.6C1451.6+1391.56+1550.19+1568.3+1550.19+1568.3L-38.2826+1580.3L-20.4398+777.542Z" opacity="1" fill="url(#LinearGradient_4)"/>
+<path d="M-31.7009+1089.26C-31.7009+1089.26+178.739+871.88+334.907+1088.66C491.074+1305.44+713.693+1193.46+946.071+1148.27C1178.45+1103.08+1059.18+1415.04+1170.38+1502.29C1281.59+1589.53+1481.33+1613.57+1481.33+1613.57L-34.8493+1623.84L-31.7009+1089.26Z" opacity="1" fill="url(#LinearGradient_5)"/>
+<path d="M704.02-17.0471C704.02-17.0471+734.873+476.917+1090.23+524.746C1445.59+572.575+1674.7+252.863+1835.39+680.423C1996.07+1107.98+2040.93+998.166+2262.12+1142.85C2458.67+1271.43+2104.63+1472.38+2104.63+1472.38L2560.03+1454.83L2559.97-17.0471L704.02-17.0471Z" opacity="1" fill="url(#LinearGradient_6)"/>
+<path d="M993.86-17.0471C993.86-17.0471+808.549+218.454+990.261+357.45C1171.97+496.447+1545.29+162.098+1718.8+283.175C1892.32+404.252+1942.69+852.702+2163.47+944.464C2384.26+1036.23+2467.08+891.269+2520.38+902.121C2573.67+912.974+2573.68+974.927+2573.68+974.927L2573.63-3.27457L993.86-17.0471Z" opacity="1" fill="url(#LinearGradient_7)"/>
+<path d="M1079.48-16.2989C1079.48-16.2989+1163.59+315.601+1578.23+141.138C1992.87-33.3247+2092.35+463.809+2126.43+720.984C2160.5+978.158+2399.08+892.366+2458.74+798.611C2518.39+704.856+2573.65+466.417+2573.65+466.417L2573.63-2.3583L1079.48-16.2989Z" opacity="1" fill="url(#LinearGradient_8)"/>
+<path d="M2079.96-6.95218C2079.96-6.95218+2203.51+1017.78+2377.07+542.544C2550.63+67.3062+2579.07+350.615+2579.07+350.615L2557.7-14.7609L2079.96-6.95218Z" opacity="1" fill="url(#LinearGradient_9)"/>
+</g>
+</svg>

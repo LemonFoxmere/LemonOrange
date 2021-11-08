@@ -61,22 +61,3 @@ about_tl_mobile.add({
     filter: ["blur(10px) brightness(0.4)","blur(0px) brightness(1)"],
     duration:1000
 },"-=700")
-
-// This should calculate everything automatically
-var scroll_scaler = 10 // for animation scrolls
-var panel_extend_length = 1000 // unit = vh
-
-about_tl_mobile.add({ // show title and panel (rule is 1vh for every 20 time unit)
-    targets: "#project",
-    translateY: ["100vh", `-${panel_extend_length}vh`],
-    easing: "linear",
-    duration: `${scroll_scaler*(panel_extend_length+100)}`,
-}, "-=700");
-
-about_tl_mobile.add({ 
-    targets: "#main-logo",
-    translateY: "-100vh",
-    easing: "linear",
-    duration: `${scroll_scaler*100}`,
-}, `-=${scroll_scaler*(panel_extend_length+100) - 82*scroll_scaler}`)
-// offset is always <panel duration - 1340>, where 1340 is the offset
