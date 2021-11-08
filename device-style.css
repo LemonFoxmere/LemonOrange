@@ -1,5 +1,10 @@
 /* Mobile */
 @media (min-width: 0px) {
+    .copyrightmsg{
+        font-size: 0.5rem;
+        font-weight: 300;
+    }
+
     /* trigger */
     #project-trigger{
         top:-60%
@@ -95,6 +100,11 @@
 
 /* v Tablet v */
 @media (min-width: 700px) { 
+    .copyrightmsg{
+        font-size: 0.75rem;
+        font-weight: 300;
+    }
+
     /* triggers */
     #project-trigger{
         top:35%
