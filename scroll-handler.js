@@ -58,6 +58,10 @@ setInterval((e) => {
     }
 })
 
+function returntop(){
+    new SmoothScroll().animateScroll(0)
+}
+
 // add navigation button events
 document.getElementById("home").addEventListener("click", () => {
     new SmoothScroll().animateScroll(0)
@@ -68,9 +72,6 @@ document.getElementById("about").addEventListener("click", () => {
 })
 
 document.getElementById("projects").addEventListener("click", () => {
-    if(!on_mobile()){
-        new SmoothScroll().animateScroll(3650)
-    } else {
-        new SmoothScroll().animateScroll(3550) // mobile scrolling
-    }
+    let anchor = document.querySelector('#project-scroll-trigger');
+    new SmoothScroll().animateScroll(anchor);
 })

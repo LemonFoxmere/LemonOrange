@@ -1,5 +1,16 @@
 /* Mobile */
 @media (min-width: 0px) {
+    #end-art{
+        width:20rem;
+        height:20rem
+    }
+    #end-return{
+        transform: translate(calc(50% + 1.9rem), calc(50% + 8.2rem));
+        width:9rem;
+        height:4rem;
+        border-radius: 1.3rem;
+    }
+
     .copyrightmsg{
         font-size: 0.5rem;
         font-weight: 300;
@@ -100,6 +111,17 @@
 
 /* v Tablet v */
 @media (min-width: 700px) { 
+    #end-art{
+        width:25rem;
+        height:25rem
+    }
+    #end-return{
+        transform: translate(calc(50% + 1.9rem), calc(50% + 9.2rem));
+        width:11rem;
+        height:5rem;
+        border-radius: 1.3rem;
+    }
+
     .copyrightmsg{
         font-size: 0.75rem;
         font-weight: 300;
