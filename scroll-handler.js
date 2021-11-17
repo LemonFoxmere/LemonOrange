@@ -59,6 +59,10 @@ setInterval((e) => {
 })
 
 function returntop(){
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
 }
 
 // add navigation button events
