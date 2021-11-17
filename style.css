@@ -8,7 +8,7 @@
 }
 
 html, body{
-    /* scroll-behavior: smooth; */
+    scroll-behavior: smooth;
     overflow-x: hidden;
     background-color: #181c1f;
 }

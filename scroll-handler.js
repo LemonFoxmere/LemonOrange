@@ -59,19 +59,24 @@ setInterval((e) => {
 })
 
 function returntop(){
-    new SmoothScroll().animateScroll(0)
 }
 
 // add navigation button events
 document.getElementById("home").addEventListener("click", () => {
-    new SmoothScroll().animateScroll(0)
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
 })
 
 document.getElementById("about").addEventListener("click", () => {
-    new SmoothScroll().animateScroll(1500)
+    window.scrollTo({
+        top: 2000,
+        behavior: "smooth"
+    });
 })
 
 document.getElementById("projects").addEventListener("click", () => {
-    let anchor = document.querySelector('#project-scroll-trigger');
-    new SmoothScroll().animateScroll(anchor);
+    let el = document.querySelector("#project");
+    window.scrollTo({top: el.offsetTop+window.innerHeight/2, behavior: 'smooth'});
 })
